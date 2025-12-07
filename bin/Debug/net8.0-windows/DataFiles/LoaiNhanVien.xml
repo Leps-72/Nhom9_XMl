@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DanhSachLoaiNhanVien>
+	<Loai>
+		<MaLoai>QL</MaLoai>
+		<TenLoai>Quản Lý</TenLoai>
+	</Loai>
+	<Loai>
+		<MaLoai>PC</MaLoai>
+		<TenLoai>Pha Chế</TenLoai>
+	</Loai>
+	<Loai>
+		<MaLoai>PV</MaLoai>
+		<TenLoai>Phục Vụ</TenLoai>
+	</Loai>
+	<Loai>
+		<MaLoai>NV</MaLoai>
+		<TenLoai>Nhân Viên</TenLoai>
+	</Loai>
+	<Loai>
+		<MaLoai>TN</MaLoai>
+		<TenLoai>Thu Ngân</TenLoai>
+	</Loai>
+</DanhSachLoaiNhanVien>

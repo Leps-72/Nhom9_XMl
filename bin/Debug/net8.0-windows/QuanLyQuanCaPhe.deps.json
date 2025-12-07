@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "QuanLyQuanCaPhe/1.0.0": {
+        "runtime": {
+          "QuanLyQuanCaPhe.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "QuanLyQuanCaPhe/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

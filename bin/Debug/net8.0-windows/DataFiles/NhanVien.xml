@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DanhSachNhanVien>
+  <NhanVien MaNV="NV001">
+    <HoTen>Quản Lý Hệ Thống</HoTen>
+    <TenDangNhap>admin</TenDangNhap>
+    <MatKhau>e10adc3949ba59abbe56e057f20f883e</MatKhau>
+    <!-- đây là MD5 của 123456 -->
+    <QuyenTruyCap>QuanLy</QuyenTruyCap>
+    <NgayVaoLam>2025-01-01</NgayVaoLam>
+  </NhanVien>
+  <NhanVien MaNV="NV002">
+    <HoTen>tu</HoTen>
+    <TenDangNhap>tu</TenDangNhap>
+    <MatKhau>827ccb0eea8a706c4c34a16891f84e7b</MatKhau>
+    <QuyenTruyCap>BanHang</QuyenTruyCap>
+    <NgayVaoLam>2025-12-07</NgayVaoLam>
+  </NhanVien>
+  <NhanVien MaNV="NV003">
+    <HoTen>thanhtu</HoTen>
+    <TenDangNhap>thanhtu</TenDangNhap>
+    <MatKhau>e10adc3949ba59abbe56e057f20f883e</MatKhau>
+    <QuyenTruyCap>BanHang</QuyenTruyCap>
+    <NgayVaoLam>2025-12-07</NgayVaoLam>
+  </NhanVien>
+</DanhSachNhanVien>
