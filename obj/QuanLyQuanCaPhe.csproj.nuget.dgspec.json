@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\125\\Nhom9_XMl\\QuanLyQuanCaPhe.csproj": {}
+    "C:\\Users\\thanh\\source\\repos\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj": {}
   },
   "projects": {
-    "E:\\125\\Nhom9_XMl\\QuanLyQuanCaPhe.csproj": {
+    "C:\\Users\\thanh\\source\\repos\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\125\\Nhom9_XMl\\QuanLyQuanCaPhe.csproj",
+        "projectUniqueName": "C:\\Users\\thanh\\source\\repos\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj",
         "projectName": "QuanLyQuanCaPhe",
-        "projectPath": "E:\\125\\Nhom9_XMl\\QuanLyQuanCaPhe.csproj",
-        "packagesPath": "C:\\Users\\huynh\\.nuget\\packages\\",
-        "outputPath": "E:\\125\\Nhom9_XMl\\obj\\",
+        "projectPath": "C:\\Users\\thanh\\source\\repos\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thanh\\source\\repos\\QuanLyQuanCaPhe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\huynh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,11 +44,21 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.1.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,7 +78,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

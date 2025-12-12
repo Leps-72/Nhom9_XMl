@@ -41,6 +41,7 @@
             danhMụcToolStripMenuItem = new ToolStripMenuItem();
             banHangToolStripMenuItem = new ToolStripMenuItem();
             banHangFormToolStripMenuItem = new ToolStripMenuItem();
+            orderToolStripMenuItem = new ToolStripMenuItem();
             thongKeToolStripMenuItem = new ToolStripMenuItem();
             doanhThuNgayToolStripMenuItem = new ToolStripMenuItem();
             doanhThuMonToolStripMenuItem = new ToolStripMenuItem();
@@ -53,7 +54,6 @@
             thôngTinPhầnMềmToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             statusStrip1 = new StatusStrip();
-            orderToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -105,32 +105,33 @@
             // nhanVienToolStripMenuItem
             // 
             nhanVienToolStripMenuItem.Name = "nhanVienToolStripMenuItem";
-            nhanVienToolStripMenuItem.Size = new Size(159, 26);
+            nhanVienToolStripMenuItem.Size = new Size(224, 26);
             nhanVienToolStripMenuItem.Text = "Nhân viên";
             nhanVienToolStripMenuItem.Click += nhanVienToolStripMenuItem_Click;
             // 
             // banToolStripMenuItem
             // 
             banToolStripMenuItem.Name = "banToolStripMenuItem";
-            banToolStripMenuItem.Size = new Size(159, 26);
+            banToolStripMenuItem.Size = new Size(224, 26);
             banToolStripMenuItem.Text = "Bàn";
+            banToolStripMenuItem.Click += banToolStripMenuItem_Click;
             // 
             // khuVucToolStripMenuItem
             // 
             khuVucToolStripMenuItem.Name = "khuVucToolStripMenuItem";
-            khuVucToolStripMenuItem.Size = new Size(159, 26);
+            khuVucToolStripMenuItem.Size = new Size(224, 26);
             khuVucToolStripMenuItem.Text = "Khu vực";
             // 
             // sanPhamToolStripMenuItem
             // 
             sanPhamToolStripMenuItem.Name = "sanPhamToolStripMenuItem";
-            sanPhamToolStripMenuItem.Size = new Size(159, 26);
+            sanPhamToolStripMenuItem.Size = new Size(224, 26);
             sanPhamToolStripMenuItem.Text = "Sản phẩm";
             // 
             // danhMụcToolStripMenuItem
             // 
             danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
-            danhMụcToolStripMenuItem.Size = new Size(159, 26);
+            danhMụcToolStripMenuItem.Size = new Size(224, 26);
             danhMụcToolStripMenuItem.Text = "Danh mục";
             // 
             // banHangToolStripMenuItem
@@ -143,8 +144,15 @@
             // banHangFormToolStripMenuItem
             // 
             banHangFormToolStripMenuItem.Name = "banHangFormToolStripMenuItem";
-            banHangFormToolStripMenuItem.Size = new Size(224, 26);
+            banHangFormToolStripMenuItem.Size = new Size(183, 26);
             banHangFormToolStripMenuItem.Text = "Bàn bán hàng";
+            // 
+            // orderToolStripMenuItem
+            // 
+            orderToolStripMenuItem.Name = "orderToolStripMenuItem";
+            orderToolStripMenuItem.Size = new Size(183, 26);
+            orderToolStripMenuItem.Text = "Order";
+            orderToolStripMenuItem.Click += orderToolStripMenuItem_Click;
             // 
             // thongKeToolStripMenuItem
             // 
@@ -227,13 +235,6 @@
             statusStrip1.Size = new Size(1182, 24);
             statusStrip1.TabIndex = 1;
             statusStrip1.Text = "statusStrip1";
-            // 
-            // orderToolStripMenuItem
-            // 
-            orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            orderToolStripMenuItem.Size = new Size(224, 26);
-            orderToolStripMenuItem.Text = "Order";
-            orderToolStripMenuItem.Click += orderToolStripMenuItem_Click;
             // 
             // Form_Chinh
             // 

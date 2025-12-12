@@ -354,5 +354,10 @@ namespace QuanLyQuanCaPhe.GUI
             f.SetChiTietFromOrder(list);
             f.ShowDialog();
         }
+
+        private void dgvMon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

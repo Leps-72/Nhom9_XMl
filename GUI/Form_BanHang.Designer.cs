@@ -257,6 +257,7 @@
             dgvMon.RowHeadersWidth = 51;
             dgvMon.Size = new Size(343, 247);
             dgvMon.TabIndex = 25;
+            dgvMon.CellContentClick += dgvMon_CellContentClick;
             // 
             // cboDanhMuc
             // 
