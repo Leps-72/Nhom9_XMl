@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DanhMucs>
+  <DanhMuc>
+    <MaDM>DM01</MaDM>
+    <TenDM>Cà phê</TenDM>
+    <MoTa></MoTa>
+  </DanhMuc>
+  <DanhMuc>
+    <MaDM>DM02</MaDM>
+    <TenDM>Trà</TenDM>
+    <MoTa></MoTa>
+  </DanhMuc>
+  <DanhMuc>
+    <MaDM>DM03</MaDM>
+    <TenDM>Trà sữa</TenDM>
+    <MoTa></MoTa>
+  </DanhMuc>
+  <DanhMuc>
+    <MaDM>DM04</MaDM>
+    <TenDM>Nước ép</TenDM>
+    <MoTa></MoTa>
+  </DanhMuc>
+  <DanhMuc>
+    <MaDM>DM05</MaDM>
+    <TenDM>Sinh tố</TenDM>
+    <MoTa></MoTa>
+  </DanhMuc>
+  <DanhMuc>
+    <MaDM>DM06</MaDM>
+    <TenDM>Đá xay</TenDM>
+    <MoTa></MoTa>
+  </DanhMuc>
+  <DanhMuc>
+    <MaDM>DM07</MaDM>
+    <TenDM>Bánh</TenDM>
+    <MoTa></MoTa>
+  </DanhMuc>
+  <DanhMuc>
+    <MaDM>DM08</MaDM>
+    <TenDM>Kẹo</TenDM>
+    <MoTa></MoTa>
+  </DanhMuc>
+</DanhMucs>

@@ -18,6 +18,7 @@ namespace QuanLyQuanCaPhe.Helper
             => Path.Combine(DataDir, fileName);
 
         public static string PathMon => GetXmlFilePath("Mon.xml");
+        public static string PathDanhMuc => GetXmlFilePath("DanhMuc.xml");
         public static string PathHoaDon => GetXmlFilePath("HoaDon.xml");
         public static string PathChiTietHoaDon => GetXmlFilePath("ChiTietHoaDon.xml");
 
@@ -38,6 +39,13 @@ namespace QuanLyQuanCaPhe.Helper
 
             if (!File.Exists(PathMon))
                 new XDocument(new XElement("Mons")).Save(PathMon);
+        }
+        public static void EnsureDanhMucFile()
+        {
+            if (!Directory.Exists(DataDir)) Directory.CreateDirectory(DataDir);
+
+            if (!File.Exists(PathDanhMuc))
+                new XDocument(new XElement("DanhMucs")).Save(PathDanhMuc);
         }
 
         public static string MaHoaMD5(string password)

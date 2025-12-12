@@ -137,7 +137,7 @@ namespace QuanLyQuanCaPhe.GUI
 
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MoFormCon(new Form_SanPham());
+            MoFormCon(new Form_QuanLySanPhamDanhMuc());
         }
 
         private void bànToolStripMenuItem_Click(object sender, EventArgs e)
@@ -231,24 +231,10 @@ namespace QuanLyQuanCaPhe.GUI
             f.Show();
         }
 
-        private void banToolStripMenuItem_Click(object sender, EventArgs e)
+        private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Kiểm tra xem Form_Ban đã mở chưa, nếu có rồi thì focus lên
-            Form_Ban frm = Application.OpenForms.OfType<Form_Ban>().FirstOrDefault();
-            if (frm != null)
-            {
-                frm.BringToFront();
-                frm.WindowState = FormWindowState.Normal;
-                return;
-            }
-
-            // Nếu chưa mở thì mở mới
-            frm = new Form_Ban
-            {
-                StartPosition = FormStartPosition.CenterScreen,
-                WindowState = FormWindowState.Normal
-            };
-            frm.Show(); // hoặc frm.ShowDialog() nếu muốn modal
+            Form_QuanLySanPhamDanhMuc f = new Form_QuanLySanPhamDanhMuc();
+            f.Show();
         }
     }
 }
