@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mons>
+
+	<!-- CÀ PHÊ -->
+	<Mon>
+		<MaMon>CFDEN</MaMon>
+		<TenMon>Cà phê đen</TenMon>
+		<DanhMuc>Cà phê</DanhMuc>
+		<DonGia>20000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>CFSUADA</MaMon>
+		<TenMon>Cà phê sữa đá</TenMon>
+		<DanhMuc>Cà phê</DanhMuc>
+		<DonGia>25000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>CFNONG</MaMon>
+		<TenMon>Cà phê nóng</TenMon>
+		<DanhMuc>Cà phê</DanhMuc>
+		<DonGia>20000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>BACXIU</MaMon>
+		<TenMon>Bạc xỉu</TenMon>
+		<DanhMuc>Cà phê</DanhMuc>
+		<DonGia>30000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>CAPPU</MaMon>
+		<TenMon>Cappuccino</TenMon>
+		<DanhMuc>Cà phê</DanhMuc>
+		<DonGia>40000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>LATTE</MaMon>
+		<TenMon>Latte</TenMon>
+		<DanhMuc>Cà phê</DanhMuc>
+		<DonGia>42000</DonGia>
+	</Mon>
+
+	<!-- TRÀ -->
+	<Mon>
+		<MaMon>TRDAO</MaMon>
+		<TenMon>Trà đào</TenMon>
+		<DanhMuc>Trà</DanhMuc>
+		<DonGia>30000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>TRTAC</MaMon>
+		<TenMon>Trà tắc</TenMon>
+		<DanhMuc>Trà</DanhMuc>
+		<DonGia>20000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>TRVAI</MaMon>
+		<TenMon>Trà vải</TenMon>
+		<DanhMuc>Trà</DanhMuc>
+		<DonGia>32000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>TRSEN</MaMon>
+		<TenMon>Trà sen vàng</TenMon>
+		<DanhMuc>Trà</DanhMuc>
+		<DonGia>35000</DonGia>
+	</Mon>
+
+	<!-- TRÀ SỮA -->
+	<Mon>
+		<MaMon>TSTRUYEN</MaMon>
+		<TenMon>Trà sữa truyền thống</TenMon>
+		<DanhMuc>Trà sữa</DanhMuc>
+		<DonGia>35000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>TSMATCHA</MaMon>
+		<TenMon>Trà sữa matcha</TenMon>
+		<DanhMuc>Trà sữa</DanhMuc>
+		<DonGia>40000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>TSKHOAI</MaMon>
+		<TenMon>Trà sữa khoai môn</TenMon>
+		<DanhMuc>Trà sữa</DanhMuc>
+		<DonGia>42000</DonGia>
+	</Mon>
+
+	<!-- NƯỚC ÉP -->
+	<Mon>
+		<MaMon>NECAM</MaMon>
+		<TenMon>Nước ép cam</TenMon>
+		<DanhMuc>Nước ép</DanhMuc>
+		<DonGia>35000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>NECTA</MaMon>
+		<TenMon>Nước ép cà rốt</TenMon>
+		<DanhMuc>Nước ép</DanhMuc>
+		<DonGia>32000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>NEDUAHAU</MaMon>
+		<TenMon>Nước ép dưa hấu</TenMon>
+		<DanhMuc>Nước ép</DanhMuc>
+		<DonGia>30000</DonGia>
+	</Mon>
+
+	<!-- SINH TỐ -->
+	<Mon>
+		<MaMon>STXOAI</MaMon>
+		<TenMon>Sinh tố xoài</TenMon>
+		<DanhMuc>Sinh tố</DanhMuc>
+		<DonGia>38000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>STBO</MaMon>
+		<TenMon>Sinh tố bơ</TenMon>
+		<DanhMuc>Sinh tố</DanhMuc>
+		<DonGia>42000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>STDAUTAY</MaMon>
+		<TenMon>Sinh tố dâu tây</TenMon>
+		<DanhMuc>Sinh tố</DanhMuc>
+		<DonGia>45000</DonGia>
+	</Mon>
+
+	<!-- ĐÁ XAY -->
+	<Mon>
+		<MaMon>DXCHOCO</MaMon>
+		<TenMon>Đá xay chocolate</TenMon>
+		<DanhMuc>Đá xay</DanhMuc>
+		<DonGia>45000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>DXMATCHA</MaMon>
+		<TenMon>Đá xay matcha</TenMon>
+		<DanhMuc>Đá xay</DanhMuc>
+		<DonGia>47000</DonGia>
+	</Mon>
+
+	<!-- BÁNH -->
+	<Mon>
+		<MaMon>BANH01</MaMon>
+		<TenMon>Bánh tiramisu</TenMon>
+		<DanhMuc>Bánh</DanhMuc>
+		<DonGia>45000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>BANH02</MaMon>
+		<TenMon>Bánh bông lan trứng muối</TenMon>
+		<DanhMuc>Bánh</DanhMuc>
+		<DonGia>50000</DonGia>
+	</Mon>
+	<Mon>
+		<MaMon>BANH03</MaMon>
+		<TenMon>Cookie bơ</TenMon>
+		<DanhMuc>Bánh</DanhMuc>
+		<DonGia>25000</DonGia>
+	</Mon>
+
+</Mons>

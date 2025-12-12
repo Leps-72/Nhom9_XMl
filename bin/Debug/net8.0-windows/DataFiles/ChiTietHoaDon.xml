@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ChiTietHoaDons>
+  <ChiTiet>
+    <MaHD>HD001</MaHD>
+    <MaMon>CFDEN</MaMon>
+    <TenMon>Cà phê đen</TenMon>
+    <SoLuong>1</SoLuong>
+    <DonGia>20000</DonGia>
+    <ThanhTien>20000</ThanhTien>
+  </ChiTiet>
+  <ChiTiet>
+    <MaHD>HD002</MaHD>
+    <MaMon>DXMATCHA</MaMon>
+    <TenMon>Đá xay matcha</TenMon>
+    <SoLuong>1</SoLuong>
+    <DonGia>47000</DonGia>
+    <ThanhTien>47000</ThanhTien>
+  </ChiTiet>
+  <ChiTiet>
+    <MaHD>HD002</MaHD>
+    <MaMon>DXCHOCO</MaMon>
+    <TenMon>Đá xay chocolate</TenMon>
+    <SoLuong>3</SoLuong>
+    <DonGia>45000</DonGia>
+    <ThanhTien>135000</ThanhTien>
+  </ChiTiet>
+</ChiTietHoaDons>

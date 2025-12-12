@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HoaDons>
+  <HoaDon>
+    <MaHD>HD001</MaHD>
+    <MaPhieu>PGM001</MaPhieu>
+    <MaBan>B02</MaBan>
+    <NgayLap>2025-12-12T10:05:00</NgayLap>
+    <MaNhanVien>NV01</MaNhanVien>
+    <TongTien>65000</TongTien>
+    <GiamGia>5000</GiamGia>
+    <ThanhTien>60000</ThanhTien>
+    <HinhThucThanhToan>TienMat</HinhThucThanhToan>
+  </HoaDon>
+  <HoaDon>
+    <MaHD>HD002</MaHD>
+    <MaPhieu>PGM002</MaPhieu>
+    <MaBan>B01</MaBan>
+    <NgayLap>2025-12-12T11:20:00</NgayLap>
+    <MaNhanVien>NV02</MaNhanVien>
+    <TongTien>30000</TongTien>
+    <GiamGia>0</GiamGia>
+    <ThanhTien>30000</ThanhTien>
+    <HinhThucThanhToan>ChuyenKhoan</HinhThucThanhToan>
+  </HoaDon>
+  <HoaDon MaHD="HD001">
+    <NgayLap>2025-12-12T14:39:34</NgayLap>
+    <TongTien>20000</TongTien>
+    <GiamGiaPercent>0</GiamGiaPercent>
+    <ThanhTien>20000</ThanhTien>
+    <HinhThucThanhToan>TienMat</HinhThucThanhToan>
+  </HoaDon>
+  <HoaDon MaHD="HD002">
+    <NgayLap>2025-12-12T14:42:22</NgayLap>
+    <TongTien>182000</TongTien>
+    <GiamGiaPercent>0</GiamGiaPercent>
+    <ThanhTien>182000</ThanhTien>
+    <HinhThucThanhToan>TienMat</HinhThucThanhToan>
+  </HoaDon>
+</HoaDons>
