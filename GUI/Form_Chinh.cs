@@ -219,5 +219,16 @@ namespace QuanLyQuanCaPhe.GUI
             panelNoiDung.Controls.Add(frm);
             frm.Show();
         }
+
+        private void orderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form_BanHang f = new Form_BanHang();
+            f.FormClosed += (s, args) =>
+            {
+                this.Show();
+            };
+            f.Show();
+        }
     }
 }
