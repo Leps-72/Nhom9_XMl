@@ -35,9 +35,7 @@ E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_DangKy.resour
 E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_DangNhap.resources
 E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_HoaDon.resources
 E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_NhanVien.resources
-E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.Form_SanPham.resources
 E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.Form_ThongKeNgay.resources
-E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.pnlThongTin.resources
 E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.csproj.GenerateResource.cache
 E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GeneratedMSBuildEditorConfig.editorconfig
 E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.AssemblyInfoInputs.cache
@@ -49,3 +47,5 @@ E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\refint\QuanLyQuanCaPhe.dll
 E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.pdb
 E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.genruntimeconfig.cache
 E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\ref\QuanLyQuanCaPhe.dll
+E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.Form_QuanLySanPhamDanhMuc.resources
+E:\125\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.Properties.Resources.resources

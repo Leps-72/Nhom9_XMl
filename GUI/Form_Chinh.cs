@@ -137,7 +137,7 @@ namespace QuanLyQuanCaPhe.GUI
 
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MoFormCon(new Form_SanPham());
+            MoFormCon(new Form_QuanLySanPhamDanhMuc());
         }
 
         private void bànToolStripMenuItem_Click(object sender, EventArgs e)
@@ -228,6 +228,12 @@ namespace QuanLyQuanCaPhe.GUI
             {
                 this.Show();
             };
+            f.Show();
+        }
+
+        private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_QuanLySanPhamDanhMuc f = new Form_QuanLySanPhamDanhMuc();
             f.Show();
         }
     }

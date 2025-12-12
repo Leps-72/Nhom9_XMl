@@ -10,7 +10,7 @@ namespace QuanLyQuanCaPhe.Models
     {
         public string MaMon { get; set; } = "";
         public string TenMon { get; set; } = "";
-        public string DanhMuc { get; set; } = "";
+        public string MaDM { get; set; } = "";  
         public decimal DonGia { get; set; }
     }
 }
