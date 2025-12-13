@@ -18,6 +18,8 @@ namespace QuanLyQuanCaPhe
         public Form_ThongKeNgay()
         {
             InitializeComponent();
+            this.BackgroundImage = Properties.Resources.background4;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
         private void Form_ThongKeNgay_Load(object sender, EventArgs e)
         {
@@ -53,17 +55,34 @@ namespace QuanLyQuanCaPhe
             txtTongDoanhThu.Text = tong.ToString("N0") + " VNĐ";
             // ===== HEADER =====
             dgvDoanhThu.EnableHeadersVisualStyles = false;
+            dgvDoanhThu.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(92, 64, 51);     // nâu cà phê
+            dgvDoanhThu.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvDoanhThu.ColumnHeadersDefaultCellStyle.Font =
                 new Font("Segoe UI", 12, FontStyle.Bold);
-
             dgvDoanhThu.ColumnHeadersDefaultCellStyle.Alignment =
                 DataGridViewContentAlignment.MiddleCenter;
 
             dgvDoanhThu.ColumnHeadersHeight = 40;
+            dgvDoanhThu.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvDoanhThu.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(230, 215, 200);
 
             // ===== GIÃN FULL CỘT =====
             dgvDoanhThu.AutoSizeColumnsMode =
                 DataGridViewAutoSizeColumnsMode.Fill;
+            // ===== BODY =====
+            dgvDoanhThu.BackgroundColor = Color.White;
+            dgvDoanhThu.GridColor = Color.LightGray;
+
+            dgvDoanhThu.DefaultCellStyle.BackColor = Color.White;
+            dgvDoanhThu.DefaultCellStyle.ForeColor = Color.Black;
+            dgvDoanhThu.DefaultCellStyle.SelectionBackColor =
+                Color.FromArgb(220, 200, 180);
+            dgvDoanhThu.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            // ===== DÒNG XEN KẼ (đẹp hơn) =====
+            dgvDoanhThu.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.FromArgb(250, 245, 240);
 
             // ===== DÒNG (ROW) =====
             dgvDoanhThu.DefaultCellStyle.Font =
@@ -89,6 +108,11 @@ namespace QuanLyQuanCaPhe
             }
 
             LoadData();
+        }
+
+        private void txtTongDoanhThu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

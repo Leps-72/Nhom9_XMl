@@ -41,9 +41,11 @@
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Location = new Point(99, 71);
+            lblTitle.BackColor = Color.Transparent;
+            lblTitle.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            lblTitle.Location = new Point(57, 86);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(173, 20);
+            lblTitle.Size = new Size(305, 35);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "ĐĂNG NHẬP HỆ THỐNG";
             lblTitle.Click += lblTitle_Click;
@@ -51,33 +53,40 @@
             // txtTenDangNhap
             // 
             txtTenDangNhap.ForeColor = Color.Gray;
-            txtTenDangNhap.Location = new Point(78, 157);
+            txtTenDangNhap.Location = new Point(77, 184);
             txtTenDangNhap.Name = "txtTenDangNhap";
             txtTenDangNhap.Size = new Size(251, 27);
             txtTenDangNhap.TabIndex = 1;
+            txtTenDangNhap.TextChanged += txtTenDangNhap_TextChanged;
             // 
             // txtMatKhau
             // 
             txtMatKhau.ForeColor = Color.Gray;
-            txtMatKhau.Location = new Point(78, 231);
+            txtMatKhau.Location = new Point(77, 258);
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.Size = new Size(251, 27);
             txtMatKhau.TabIndex = 2;
             // 
             // btnDangNhap
             // 
-            btnDangNhap.Location = new Point(114, 282);
+            btnDangNhap.BackColor = Color.DeepSkyBlue;
+            btnDangNhap.BackgroundImageLayout = ImageLayout.None;
+            btnDangNhap.FlatStyle = FlatStyle.Popup;
+            btnDangNhap.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            btnDangNhap.ForeColor = Color.White;
+            btnDangNhap.Location = new Point(77, 319);
             btnDangNhap.Name = "btnDangNhap";
-            btnDangNhap.Size = new Size(173, 55);
+            btnDangNhap.Size = new Size(251, 45);
             btnDangNhap.TabIndex = 3;
             btnDangNhap.Text = "Đăng nhập";
-            btnDangNhap.UseVisualStyleBackColor = true;
+            btnDangNhap.UseVisualStyleBackColor = false;
             btnDangNhap.Click += btnDangNhap_Click;
             // 
             // lnkDangKy
             // 
             lnkDangKy.AutoSize = true;
-            lnkDangKy.Location = new Point(114, 390);
+            lnkDangKy.BackColor = Color.Transparent;
+            lnkDangKy.Location = new Point(106, 395);
             lnkDangKy.Name = "lnkDangKy";
             lnkDangKy.Size = new Size(184, 20);
             lnkDangKy.TabIndex = 4;
@@ -88,18 +97,22 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(78, 123);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(77, 150);
             label1.Name = "label1";
-            label1.Size = new Size(107, 20);
+            label1.Size = new Size(124, 23);
             label1.TabIndex = 5;
             label1.Text = "Tên đăng nhập";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(78, 199);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            label2.Location = new Point(77, 226);
             label2.Name = "label2";
-            label2.Size = new Size(70, 20);
+            label2.Size = new Size(84, 23);
             label2.TabIndex = 6;
             label2.Text = "Mật khẩu";
             label2.Click += label2_Click;

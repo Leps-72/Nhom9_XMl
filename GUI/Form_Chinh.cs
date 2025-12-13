@@ -1,16 +1,17 @@
-﻿using System;
+﻿using QuanLyQuanCaPhe.GUI; // sửa nếu namespace khác
+using QuanLyQuanCaPhe.Helper;
+using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Drawing;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System;
-using System.Drawing;
 using System.Windows.Forms;
-using QuanLyQuanCaPhe.GUI; // sửa nếu namespace khác
 
 namespace QuanLyQuanCaPhe.GUI
 {
@@ -37,43 +38,60 @@ namespace QuanLyQuanCaPhe.GUI
             this.hoTen = hoTenNhanVien;
             this.userRole = quyen;
 
+            SetActiveMenu(heThongToolStripMenuItem);
             TaoGiaoDienChinh();
             //PhanQuyenMenu();
             CapNhatStatusBar();
         }
-
         private void TaoGiaoDienChinh()
         {
             // Form chính
             this.Text = "QUẢN LÝ QUÁN CÀ PHÊ - WELCOME";
-            this.BackColor = Color.FromArgb(245, 242, 237); // màu kem cà phê nhẹ
-            this.IsMdiContainer = true;
+            this.BackColor = Color.FromArgb(245, 242, 237);
 
-            // Panel chứa các form con
-            panelNoiDung = new Panel
+            // ❌ KHÔNG DÙNG MDI
+            // this.IsMdiContainer = true;
+
+            // ===== MENUSTRIP (đã có trong Designer) =====
+            menuStrip1.Dock = DockStyle.Top;
+            menuStrip1.BringToFront();
+            //menuStrip1.Renderer = new MenuStripFullBorderRenderer(); làm border mà k cần rồi
+
+
+            // ===== STATUS STRIP =====
+            statusStrip = new StatusStrip
             {
-                Dock = DockStyle.Fill,
-                BackColor = Color.White
+                Dock = DockStyle.Bottom
             };
-            this.Controls.Add(panelNoiDung);
 
-            // StatusStrip dưới cùng
-            statusStrip = new StatusStrip();    
             lblUser = new ToolStripStatusLabel();
-            lblTime = new ToolStripStatusLabel();
-            lblTime.Alignment = ToolStripItemAlignment.Right;
+            lblTime = new ToolStripStatusLabel
+            {
+                Alignment = ToolStripItemAlignment.Right
+            };
 
             statusStrip.Items.Add(lblUser);
             statusStrip.Items.Add(new ToolStripStatusLabel { Spring = true });
             statusStrip.Items.Add(lblTime);
+
             this.Controls.Add(statusStrip);
 
-            // Timer cập nhật giờ
+            // ===== PANEL NỘI DUNG (QUAN TRỌNG NHẤT) =====
+            panelNoiDung = new Panel
+            {
+                Dock = DockStyle.Fill,
+                BackgroundImage = Properties.Resources.background,
+                BackgroundImageLayout = ImageLayout.Stretch
+            };
+
+            this.Controls.Add(panelNoiDung);
+            panelNoiDung.BringToFront();   // 🔴 BẮT BUỘC
+
+            // ===== TIMER =====
             System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer { Interval = 1000 };
             timer.Tick += (s, e) => lblTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             timer.Start();
         }
-
         private void CapNhatStatusBar()
         {
             lblUser.Text = $"Người dùng: {hoTen} ({userName}) - Quyền: {(userRole == "QuanLy" ? "Quản Lý" : "Bán Hàng")}";
@@ -113,51 +131,6 @@ namespace QuanLyQuanCaPhe.GUI
 
         // ==================== CÁC SỰ KIỆN MENU ====================
 
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc muốn đăng xuất?", "Xác nhận",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                this.Close();
-                new Form_DangNhap().Show(); // quay lại form đăng nhập
-            }
-        }
-
-        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Thoát phần mềm?", "Xác nhận",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        // Ví dụ các menu con
-        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MoFormCon(new Form_NhanVien());
-        }
-
-        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MoFormCon(new Form_QuanLySanPhamDanhMuc());
-        }
-
-        private void bànToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MoFormCon(new Form_Ban());
-        }
-
-        private void bánHàngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MoFormCon(new Form_BanHang()); // màn hình order chính
-        }
-
-        private void doanhThuTheoNgàyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MoFormCon(new Form_ThongKeNgay());
-        }
-
         private void giớiThiệuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
@@ -181,33 +154,10 @@ namespace QuanLyQuanCaPhe.GUI
             this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
-
-        private void dangNhapToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_DangNhap f = new Form_DangNhap();
-            f.ShowDialog(); // mở kiểu modal, phải đóng mới dùng tiếp được
-
-            // Nếu đăng nhập thành công → cập nhật lại thông tin trên status bar
-            // (Bạn sẽ thêm sau khi làm xong phần đăng nhập)
-        }
-        private void dangKyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_DangKy f = new Form_DangKy();
-            f.ShowDialog(); // mở modal, tập trung đăng ký
-        }
-
-        private void thoatToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Thoát phần mềm?", "Xác nhận",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
         private void doanhThuNhanVienToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MoFormCon(new Form_TinhLuong());
+            SetActiveMenu(thongKeToolStripMenuItem);
         }
 
         private void nhanVienToolStripMenuItem_Click(object sender, EventArgs e)
@@ -222,18 +172,21 @@ namespace QuanLyQuanCaPhe.GUI
 
             panelNoiDung.Controls.Add(frm);
             frm.Show();
+            SetActiveMenu(quanLyToolStripMenuItem);
         }
 
         private void orderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_BanHang f = new Form_BanHang();
             f.Show();
+            SetActiveMenu(banHangToolStripMenuItem);
         }
 
         private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_QuanLySanPhamDanhMuc f = new Form_QuanLySanPhamDanhMuc();
             f.Show();
+            SetActiveMenu(quanLyToolStripMenuItem);
         }
 
         private void banToolStripMenuItem_Click(object sender, EventArgs e)
@@ -254,16 +207,62 @@ namespace QuanLyQuanCaPhe.GUI
                 WindowState = FormWindowState.Normal
             };
             frm.Show(); // hoặc frm.ShowDialog() nếu muốn modal
+            SetActiveMenu(quanLyToolStripMenuItem);
         }
 
         private void doanhThuMonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MoFormCon(new Form_ThongKeMon());
+            SetActiveMenu(thongKeToolStripMenuItem);
         }
 
         private void doanhThuNgayToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MoFormCon(new Form_ThongKeNgay());
+            SetActiveMenu(thongKeToolStripMenuItem);
+            
         }
+
+        private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn đăng xuất?", "Xác nhận",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                new Form_DangNhap().Show(); // quay lại form đăng nhập
+            }
+        }
+
+        private void thoatToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Thoát phần mềm?", "Xác nhận",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void heThongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelNoiDung.Controls.Clear();
+            SetActiveMenu(heThongToolStripMenuItem);
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+        private void SetActiveMenu(ToolStripMenuItem activeItem)
+        {
+            foreach (ToolStripMenuItem item in menuStrip1.Items)
+            {
+                item.BackColor = Color.Black;
+                item.ForeColor = Color.FromArgb(224, 224, 224); 
+            }
+
+            activeItem.BackColor = Color.FromArgb(224, 224, 224); 
+            activeItem.ForeColor = Color.Black;     
+        }
+
     }
 }

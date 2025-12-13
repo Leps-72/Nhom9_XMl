@@ -39,8 +39,10 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(330, 55);
+            label4.ForeColor = SystemColors.MenuText;
+            label4.Location = new Point(330, 43);
             label4.Name = "label4";
             label4.Size = new Size(602, 46);
             label4.TabIndex = 5;
@@ -54,8 +56,10 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(370, 134);
+            label5.ForeColor = Color.DarkBlue;
+            label5.Location = new Point(370, 122);
             label5.Name = "label5";
             label5.Size = new Size(58, 23);
             label5.TabIndex = 9;
@@ -64,7 +68,7 @@
             // cboThang
             // 
             cboThang.FormattingEnabled = true;
-            cboThang.Location = new Point(464, 133);
+            cboThang.Location = new Point(464, 121);
             cboThang.Name = "cboThang";
             cboThang.Size = new Size(99, 28);
             cboThang.TabIndex = 10;
@@ -72,7 +76,7 @@
             // cboNam
             // 
             cboNam.FormattingEnabled = true;
-            cboNam.Location = new Point(767, 133);
+            cboNam.Location = new Point(767, 121);
             cboNam.Name = "cboNam";
             cboNam.Size = new Size(99, 28);
             cboNam.TabIndex = 12;
@@ -80,8 +84,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(673, 134);
+            label1.ForeColor = Color.DarkBlue;
+            label1.Location = new Point(673, 122);
             label1.Name = "label1";
             label1.Size = new Size(47, 23);
             label1.TabIndex = 11;

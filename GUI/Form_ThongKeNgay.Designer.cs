@@ -43,8 +43,10 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(366, 55);
+            label4.ForeColor = Color.Crimson;
+            label4.Location = new Point(360, 38);
             label4.Name = "label4";
             label4.Size = new Size(510, 46);
             label4.TabIndex = 4;
@@ -54,8 +56,10 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(254, 157);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(248, 140);
             label5.Name = "label5";
             label5.Size = new Size(73, 23);
             label5.TabIndex = 8;
@@ -64,8 +68,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(535, 157);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(529, 140);
             label1.Name = "label1";
             label1.Size = new Size(84, 23);
             label1.TabIndex = 9;
@@ -75,7 +81,7 @@
             // 
             dtpTuNgay.CustomFormat = "dd/MM/yyyy";
             dtpTuNgay.Format = DateTimePickerFormat.Custom;
-            dtpTuNgay.Location = new Point(350, 157);
+            dtpTuNgay.Location = new Point(344, 140);
             dtpTuNgay.Name = "dtpTuNgay";
             dtpTuNgay.Size = new Size(123, 27);
             dtpTuNgay.TabIndex = 18;
@@ -84,7 +90,7 @@
             // 
             dtpDenNgay.CustomFormat = "dd/MM/yyyy";
             dtpDenNgay.Format = DateTimePickerFormat.Custom;
-            dtpDenNgay.Location = new Point(645, 157);
+            dtpDenNgay.Location = new Point(639, 140);
             dtpDenNgay.Name = "dtpDenNgay";
             dtpDenNgay.Size = new Size(123, 27);
             dtpDenNgay.TabIndex = 19;
@@ -92,7 +98,7 @@
             // dgvDoanhThu
             // 
             dgvDoanhThu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDoanhThu.Location = new Point(141, 209);
+            dgvDoanhThu.Location = new Point(135, 192);
             dgvDoanhThu.Name = "dgvDoanhThu";
             dgvDoanhThu.RowHeadersWidth = 51;
             dgvDoanhThu.Size = new Size(937, 255);
@@ -101,8 +107,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(871, 499);
+            label2.Location = new Point(826, 463);
             label2.Name = "label2";
             label2.Size = new Size(134, 23);
             label2.TabIndex = 21;
@@ -111,21 +118,27 @@
             // txtTongDoanhThu
             // 
             txtTongDoanhThu.AutoSize = true;
-            txtTongDoanhThu.Location = new Point(1028, 499);
+            txtTongDoanhThu.BackColor = Color.Transparent;
+            txtTongDoanhThu.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtTongDoanhThu.Location = new Point(984, 458);
             txtTongDoanhThu.Name = "txtTongDoanhThu";
-            txtTongDoanhThu.Size = new Size(17, 20);
+            txtTongDoanhThu.Size = new Size(23, 28);
             txtTongDoanhThu.TabIndex = 22;
             txtTongDoanhThu.Text = "a";
+            txtTongDoanhThu.Click += txtTongDoanhThu_Click;
             // 
             // btnThongKe
             // 
+            btnThongKe.BackColor = Color.MediumAquamarine;
+            btnThongKe.FlatStyle = FlatStyle.Popup;
             btnThongKe.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
-            btnThongKe.Location = new Point(859, 154);
+            btnThongKe.ForeColor = SystemColors.WindowText;
+            btnThongKe.Location = new Point(853, 137);
             btnThongKe.Name = "btnThongKe";
             btnThongKe.Size = new Size(134, 34);
             btnThongKe.TabIndex = 23;
             btnThongKe.Text = "Thống kê";
-            btnThongKe.UseVisualStyleBackColor = true;
+            btnThongKe.UseVisualStyleBackColor = false;
             btnThongKe.Click += btnThongKe_Click;
             // 
             // Form_ThongKeNgay

@@ -80,6 +80,8 @@ C:\Users\thanh\source\repos\QuanLyQuanCaPhe\bin\Debug\net8.0-windows\runtimes\wi
 C:\Users\thanh\source\repos\QuanLyQuanCaPhe\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.csproj.AssemblyReference.cache
 C:\Users\thanh\source\repos\QuanLyQuanCaPhe\obj\Debug\net8.0-windows\QuanLyQu.E4A908DB.Up2Date
 C:\Users\thanh\source\repos\QuanLyQuanCaPhe\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_TinhLuong.resources
+C:\Users\thanh\source\repos\QuanLyQuanCaPhe\bin\Debug\net8.0-windows\System.Windows.Forms.DataVisualization.dll
+C:\Users\thanh\source\repos\QuanLyQuanCaPhe\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_ThongKeMon.resources
 D:\XML\Nhom9_XMl\bin\Debug\net8.0-windows\QuanLyQuanCaPhe.exe
 D:\XML\Nhom9_XMl\bin\Debug\net8.0-windows\QuanLyQuanCaPhe.deps.json
 D:\XML\Nhom9_XMl\bin\Debug\net8.0-windows\QuanLyQuanCaPhe.runtimeconfig.json
@@ -87,6 +89,7 @@ D:\XML\Nhom9_XMl\bin\Debug\net8.0-windows\QuanLyQuanCaPhe.dll
 D:\XML\Nhom9_XMl\bin\Debug\net8.0-windows\QuanLyQuanCaPhe.pdb
 D:\XML\Nhom9_XMl\bin\Debug\net8.0-windows\Azure.Core.dll
 D:\XML\Nhom9_XMl\bin\Debug\net8.0-windows\Azure.Identity.dll
+D:\XML\Nhom9_XMl\bin\Debug\net8.0-windows\System.Windows.Forms.DataVisualization.dll
 D:\XML\Nhom9_XMl\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
 D:\XML\Nhom9_XMl\bin\Debug\net8.0-windows\Microsoft.Bcl.Cryptography.dll
 D:\XML\Nhom9_XMl\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
@@ -147,6 +150,7 @@ D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_DangNhap.reso
 D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_HoaDon.resources
 D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_NhanVien.resources
 D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.Form_QuanLySanPhamDanhMuc.resources
+D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_ThongKeMon.resources
 D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.Form_ThongKeNgay.resources
 D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_TinhLuong.resources
 D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.Properties.Resources.resources
@@ -162,7 +166,3 @@ D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\refint\QuanLyQuanCaPhe.dll
 D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.pdb
 D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.genruntimeconfig.cache
 D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\ref\QuanLyQuanCaPhe.dll
-D:\XML\Nhom9_XMl\bin\Debug\net8.0-windows\System.Windows.Forms.DataVisualization.dll
-D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_ThongKeMon.resources
-C:\Users\thanh\source\repos\QuanLyQuanCaPhe\bin\Debug\net8.0-windows\System.Windows.Forms.DataVisualization.dll
-C:\Users\thanh\source\repos\QuanLyQuanCaPhe\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_ThongKeMon.resources

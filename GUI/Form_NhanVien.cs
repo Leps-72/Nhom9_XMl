@@ -28,6 +28,8 @@ namespace QuanLyQuanCaPhe.GUI
             this.WindowState = FormWindowState.Maximized;
             LoadNhanVienVaoComboBox();
             HienThiBangChamCong();
+            this.BackgroundImage = Properties.Resources.background5;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
         // Đặt trong constructor hoặc Form_Load đều được
         private void LoadLoaiNhanVien()
@@ -91,6 +93,39 @@ namespace QuanLyQuanCaPhe.GUI
         {
             dgvChamCong.DataSource = null;
             dgvChamCong.DataSource = dsChamCong.OrderByDescending(x => x.NgayLam).ToList();
+            dgvChamCong.EnableHeadersVisualStyles = false;
+            dgvChamCong.ColumnHeadersDefaultCellStyle.BackColor =Color.FromArgb(92, 64, 51);     // nâu cà phê
+            dgvChamCong.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvChamCong.ColumnHeadersDefaultCellStyle.Font =
+                new Font("Segoe UI", 7, FontStyle.Bold);
+            dgvChamCong.ColumnHeadersDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            dgvChamCong.ColumnHeadersHeight = 40;
+            dgvChamCong.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
+            // ===== HEADER DÒNG (bên trái) =====
+            dgvChamCong.RowHeadersDefaultCellStyle.BackColor =
+                Color.FromArgb(230, 215, 200);
+
+            // ===== BODY =====
+            dgvChamCong.BackgroundColor = Color.White;
+            dgvChamCong.GridColor = Color.LightGray;
+
+            dgvChamCong.DefaultCellStyle.BackColor = Color.White;
+            dgvChamCong.DefaultCellStyle.ForeColor = Color.Black;
+            dgvChamCong.DefaultCellStyle.SelectionBackColor =
+                Color.FromArgb(220, 200, 180);
+            dgvChamCong.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            // ===== DÒNG XEN KẼ (đẹp hơn) =====
+            dgvChamCong.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.FromArgb(250, 245, 240);
+
+            // ===== AUTO SIZE =====
+            dgvChamCong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         // Nút Chấm công – đoạn lưu XML đã SỬA HOÀN HẢO
@@ -174,7 +209,7 @@ namespace QuanLyQuanCaPhe.GUI
                                 "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 LoadChamCong();           // Đọc lại dữ liệu từ file
-                HienThiBangChamCong(); 
+                HienThiBangChamCong();
             }
             catch (Exception ex)
             {
@@ -208,5 +243,9 @@ namespace QuanLyQuanCaPhe.GUI
 
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

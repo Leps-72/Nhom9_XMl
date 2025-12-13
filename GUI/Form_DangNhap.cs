@@ -13,6 +13,8 @@ using System.Drawing;
 using QuanLyQuanCaPhe.DAL;
 using QuanLyQuanCaPhe.Helper;
 using QuanLyQuanCaPhe.Models;
+using System.Drawing.Drawing2D;
+
 
 namespace QuanLyQuanCaPhe.GUI
 {
@@ -34,6 +36,22 @@ namespace QuanLyQuanCaPhe.GUI
             txtMatKhau.UseSystemPasswordChar = true;
             this.AcceptButton = btnDangNhap;
         }
+        private void Form_DangNhap_Load(object sender, EventArgs e)
+        {
+            this.DoubleBuffered = true; // chống giật
+            this.Paint += Form_DangNhap_Paint;
+            PictureBox picUser = new PictureBox
+            {
+                Image = Properties.Resources.expresso,
+                SizeMode = PictureBoxSizeMode.Zoom,
+                Size = new Size(70, 70),
+                Location = new Point(170, 10),
+                BackColor= Color.Transparent
+            };
+            this.Controls.Add(picUser);
+            picUser.SendToBack();
+        }
+
         private void txtTenDangNhap_Enter(object sender, EventArgs e)
         {
             if (txtTenDangNhap.Text == "Tên đăng nhập")
@@ -73,11 +91,6 @@ namespace QuanLyQuanCaPhe.GUI
                 // TẮT PasswordChar khi hiển thị placeholder
                 txtMatKhau.PasswordChar = '\0';
             }
-        }
-
-        private void Form_DangNhap_Load(object sender, EventArgs e)
-        {
-
         }
         private void lnkDangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -159,6 +172,28 @@ namespace QuanLyQuanCaPhe.GUI
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+        private void Form_DangNhap_Paint(object sender, PaintEventArgs e)
+        {
+            Rectangle rect = this.ClientRectangle;
+
+            using (LinearGradientBrush brush = new LinearGradientBrush(
+                rect,
+                Color.FromArgb(92, 64, 51),      // nâu cà phê đậm
+                Color.FromArgb(245, 240, 230),   // kem sáng
+                LinearGradientMode.Horizontal))    // trên → dưới
+            {
+                e.Graphics.FillRectangle(brush, rect);
+            }
+        }
+
+        private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
         }
     }
 }

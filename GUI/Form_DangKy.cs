@@ -1,15 +1,16 @@
-﻿using System;
+﻿using QuanLyQuanCaPhe.DAL;     // Để sử dụng NhanVienDAL
+using QuanLyQuanCaPhe.Helper;
+using QuanLyQuanCaPhe.Models;  // Để sử dụng Class NhanVien
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyQuanCaPhe.DAL;     // Để sử dụng NhanVienDAL
-using QuanLyQuanCaPhe.Models;  // Để sử dụng Class NhanVien
-using QuanLyQuanCaPhe.Helper;
 
 namespace QuanLyQuanCaPhe.GUI
 {
@@ -34,6 +35,7 @@ namespace QuanLyQuanCaPhe.GUI
             // Mật khẩu
             txtMatKhau.GotFocus += txtMatKhau_Enter;
             txtMatKhau.LostFocus += txtMatKhau_Leave;
+            this.AcceptButton = btnDangKy;
         }
 
         // --- CODE XỬ LÝ PLACEHOLDER TỔNG QUÁT CHO HỌ TÊN VÀ TÊN DN ---
@@ -94,6 +96,18 @@ namespace QuanLyQuanCaPhe.GUI
         private void Form_DangKy_Load(object sender, EventArgs e)
         {
 
+            this.DoubleBuffered = true; // chống giật
+            this.Paint += Form_DangNhap_Paint;
+            PictureBox picUser = new PictureBox
+            {
+                Image = Properties.Resources.expresso,
+                SizeMode = PictureBoxSizeMode.Zoom,
+                Size = new Size(70, 70),
+                Location = new Point(170, 10),
+                BackColor= Color.Transparent
+            };
+            this.Controls.Add(picUser);
+            picUser.SendToBack();
         }
 
         private void txtMatKhau_TextChanged(object sender, EventArgs e)
@@ -152,6 +166,19 @@ namespace QuanLyQuanCaPhe.GUI
             {
                 // Xử lý lỗi ngoại lệ (ví dụ: không tìm thấy file XML, lỗi đọc/ghi)
                 MessageBox.Show("Lỗi hệ thống khi thực hiện đăng ký: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void Form_DangNhap_Paint(object sender, PaintEventArgs e)
+        {
+            Rectangle rect = this.ClientRectangle;
+
+            using (LinearGradientBrush brush = new LinearGradientBrush(
+                rect,
+                Color.FromArgb(92, 64, 51),      // nâu cà phê đậm
+                Color.FromArgb(245, 240, 230),   // kem sáng
+                LinearGradientMode.Horizontal))    // trên → dưới
+            {
+                e.Graphics.FillRectangle(brush, rect);
             }
         }
     }

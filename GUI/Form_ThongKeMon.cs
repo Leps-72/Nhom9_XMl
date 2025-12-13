@@ -26,6 +26,8 @@ namespace QuanLyQuanCaPhe.GUI
 
             cboNam.Items.Add(2025);
             this.Load += Form_ThongKeMon_Load;
+            this.BackgroundImage = Properties.Resources.background6;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
         private void Form_ThongKeMon_Load(object sender, EventArgs e)
         {
@@ -101,9 +103,52 @@ namespace QuanLyQuanCaPhe.GUI
             // Bind DataGridView
             dgvThongKeMon.DataSource = data;
             dgvThongKeMon.Columns["TenMon"].HeaderText = "Tên món";
-            dgvThongKeMon.Columns["TongSoLuong"].HeaderText = "Số lượng bán";
+            dgvThongKeMon.Columns["TongSoLuong"].HeaderText = "Số lượng";
             dgvThongKeMon.Columns["TongDoanhThu"].HeaderText = "Doanh thu";
             dgvThongKeMon.Columns["TongDoanhThu"].DefaultCellStyle.Format = "N0";
+            // ===== HEADER =====
+            dgvThongKeMon.EnableHeadersVisualStyles = false;
+            dgvThongKeMon.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;     // nâu cà phê
+            dgvThongKeMon.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvThongKeMon.ColumnHeadersDefaultCellStyle.Font =
+                new Font("Segoe UI", 8, FontStyle.Bold);
+            dgvThongKeMon.ColumnHeadersDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            dgvThongKeMon.ColumnHeadersHeight = 40;
+            dgvThongKeMon.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvThongKeMon.RowHeadersDefaultCellStyle.BackColor = Color.LightSkyBlue;
+
+            // ===== GIÃN FULL CỘT =====
+            dgvThongKeMon.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+            // ===== BODY =====
+            dgvThongKeMon.BackgroundColor = Color.White;
+            dgvThongKeMon.GridColor = Color.LightGray;
+
+            dgvThongKeMon.DefaultCellStyle.BackColor = Color.White;
+            dgvThongKeMon.DefaultCellStyle.ForeColor = Color.Black;
+            dgvThongKeMon.DefaultCellStyle.SelectionBackColor =
+                Color.SkyBlue;
+            dgvThongKeMon.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            // ===== DÒNG XEN KẼ (đẹp hơn) =====
+            dgvThongKeMon.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.LightBlue;
+
+            // ===== DÒNG (ROW) =====
+            dgvThongKeMon.DefaultCellStyle.Font =
+                new Font("Segoe UI", 8);
+
+            dgvThongKeMon.RowTemplate.Height = 36;
+            dgvThongKeMon.RowsDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            // ===== READ ONLY + ĐẸP =====
+            dgvThongKeMon.ReadOnly = true;
+            dgvThongKeMon.AllowUserToAddRows = false;
+            dgvThongKeMon.AllowUserToResizeRows = false;
 
             // Bind Chart
             chartMon.Series.Clear();

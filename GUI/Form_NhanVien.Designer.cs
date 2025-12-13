@@ -44,7 +44,6 @@
             txtGioRa = new TextBox();
             lblTongGio = new Label();
             btnLamMoi = new Button();
-            lblThangHienTai = new Label();
             label7 = new Label();
             btnChamCong = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvChamCong).BeginInit();
@@ -54,7 +53,7 @@
             // 
             txtMaNV.BackColor = SystemColors.ButtonFace;
             txtMaNV.ImeMode = ImeMode.NoControl;
-            txtMaNV.Location = new Point(210, 64);
+            txtMaNV.Location = new Point(239, 106);
             txtMaNV.Name = "txtMaNV";
             txtMaNV.ReadOnly = true;
             txtMaNV.Size = new Size(195, 27);
@@ -63,25 +62,31 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(77, 64);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(106, 106);
             label1.Name = "label1";
-            label1.Size = new Size(97, 20);
+            label1.Size = new Size(103, 20);
             label1.TabIndex = 4;
             label1.Text = "Mã nhân viên";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(77, 115);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            label2.Location = new Point(106, 157);
             label2.Name = "label2";
-            label2.Size = new Size(99, 20);
+            label2.Size = new Size(105, 20);
             label2.TabIndex = 5;
             label2.Text = "Tên nhân viên";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(77, 164);
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            label3.Location = new Point(106, 206);
             label3.Name = "label3";
             label3.Size = new Size(61, 20);
             label3.TabIndex = 6;
@@ -90,14 +95,17 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(77, 218);
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            label4.Location = new Point(489, 213);
             label4.Name = "label4";
-            label4.Size = new Size(88, 20);
+            label4.Size = new Size(91, 20);
             label4.TabIndex = 7;
             label4.Text = "Giờ kết thúc";
             // 
             // dgvChamCong
             // 
+            dgvChamCong.BackgroundColor = SystemColors.MenuHighlight;
             dgvChamCong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvChamCong.Location = new Point(106, 306);
             dgvChamCong.Name = "dgvChamCong";
@@ -109,7 +117,7 @@
             // cboLoaiNV
             // 
             cboLoaiNV.FormattingEnabled = true;
-            cboLoaiNV.Location = new Point(592, 64);
+            cboLoaiNV.Location = new Point(621, 106);
             cboLoaiNV.Name = "cboLoaiNV";
             cboLoaiNV.Size = new Size(151, 28);
             cboLoaiNV.TabIndex = 10;
@@ -117,9 +125,11 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(460, 67);
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            label5.Location = new Point(489, 109);
             label5.Name = "label5";
-            label5.Size = new Size(104, 20);
+            label5.Size = new Size(109, 20);
             label5.TabIndex = 13;
             label5.Text = "Loại nhân viên";
             // 
@@ -127,7 +137,7 @@
             // 
             cboNhanVien.DropDownStyle = ComboBoxStyle.DropDownList;
             cboNhanVien.FormattingEnabled = true;
-            cboNhanVien.Location = new Point(210, 115);
+            cboNhanVien.Location = new Point(239, 157);
             cboNhanVien.Name = "cboNhanVien";
             cboNhanVien.Size = new Size(195, 28);
             cboNhanVien.TabIndex = 14;
@@ -135,17 +145,21 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(460, 134);
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            label6.Location = new Point(489, 160);
             label6.Name = "label6";
-            label6.Size = new Size(73, 20);
+            label6.Size = new Size(75, 20);
             label6.TabIndex = 15;
             label6.Text = "Ngày làm";
             // 
             // dtpNgayLam
             // 
-            dtpNgayLam.Location = new Point(592, 134);
+            dtpNgayLam.CustomFormat = "dd/MM/yyyy";
+            dtpNgayLam.Format = DateTimePickerFormat.Custom;
+            dtpNgayLam.Location = new Point(621, 160);
             dtpNgayLam.Name = "dtpNgayLam";
-            dtpNgayLam.Size = new Size(250, 27);
+            dtpNgayLam.Size = new Size(123, 27);
             dtpNgayLam.TabIndex = 17;
             // 
             // lblSoGio
@@ -159,7 +173,7 @@
             // txtGioVao
             // 
             txtGioVao.ImeMode = ImeMode.NoControl;
-            txtGioVao.Location = new Point(210, 164);
+            txtGioVao.Location = new Point(239, 206);
             txtGioVao.Name = "txtGioVao";
             txtGioVao.Size = new Size(195, 27);
             txtGioVao.TabIndex = 19;
@@ -167,7 +181,7 @@
             // txtGioRa
             // 
             txtGioRa.ImeMode = ImeMode.NoControl;
-            txtGioRa.Location = new Point(210, 211);
+            txtGioRa.Location = new Point(622, 206);
             txtGioRa.Name = "txtGioRa";
             txtGioRa.Size = new Size(195, 27);
             txtGioRa.TabIndex = 20;
@@ -182,6 +196,8 @@
             // 
             // btnLamMoi
             // 
+            btnLamMoi.FlatStyle = FlatStyle.Popup;
+            btnLamMoi.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             btnLamMoi.Location = new Point(298, 253);
             btnLamMoi.Name = "btnLamMoi";
             btnLamMoi.Size = new Size(153, 34);
@@ -189,26 +205,23 @@
             btnLamMoi.Text = "Làm mới";
             btnLamMoi.UseVisualStyleBackColor = true;
             // 
-            // lblThangHienTai
-            // 
-            lblThangHienTai.AutoSize = true;
-            lblThangHienTai.Location = new Point(1000, 33);
-            lblThangHienTai.Name = "lblThangHienTai";
-            lblThangHienTai.Size = new Size(103, 20);
-            lblThangHienTai.TabIndex = 23;
-            lblThangHienTai.Text = "Tháng hiện tại";
-            // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(69, 7);
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold);
+            label7.ForeColor = Color.Firebrick;
+            label7.Location = new Point(66, 24);
             label7.Name = "label7";
-            label7.Size = new Size(126, 20);
+            label7.Size = new Size(368, 46);
             label7.TabIndex = 24;
-            label7.Text = "Quản lý nhân viên";
+            label7.Text = "QUẢN LÝ NHÂN VIÊN";
+            label7.Click += label7_Click;
             // 
             // btnChamCong
             // 
+            btnChamCong.FlatStyle = FlatStyle.Popup;
+            btnChamCong.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             btnChamCong.Location = new Point(604, 253);
             btnChamCong.Name = "btnChamCong";
             btnChamCong.Size = new Size(153, 34);
@@ -224,7 +237,6 @@
             ClientSize = new Size(1182, 553);
             Controls.Add(btnChamCong);
             Controls.Add(label7);
-            Controls.Add(lblThangHienTai);
             Controls.Add(btnLamMoi);
             Controls.Add(lblTongGio);
             Controls.Add(txtGioRa);
@@ -271,7 +283,6 @@
         private TextBox txtGioRa;
         private Label lblTongGio;
         private Button btnLamMoi;
-        private Label lblThangHienTai;
         private Label label7;
         private Button btnChamCong;
     }
