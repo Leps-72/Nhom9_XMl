@@ -9,10 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="bin\Debug\net8.0-windows\DataFiles\ChamCong.xml" />
     <Content Include="bin\Debug\net8.0-windows\DataFiles\ChiTietHoaDon.xml" />
     <Content Include="bin\Debug\net8.0-windows\DataFiles\DanhMuc.xml" />
     <Content Include="bin\Debug\net8.0-windows\DataFiles\HoaDon.xml" />
+    <Content Include="bin\Debug\net8.0-windows\DataFiles\LoaiNhanVien.xml" />
+    <Content Include="bin\Debug\net8.0-windows\DataFiles\LuongThang.xml" />
     <Content Include="bin\Debug\net8.0-windows\DataFiles\Mon.xml" />
+    <Content Include="bin\Debug\net8.0-windows\DataFiles\NhanVien.xml" />
   </ItemGroup>
 
   <ItemGroup>

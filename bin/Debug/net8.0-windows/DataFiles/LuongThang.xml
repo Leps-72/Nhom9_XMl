@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DanhSachLuong>
+  <Luong>
+    <MaNV>NV001</MaNV>
+    <HoTen>Quản Lý Hệ Thống</HoTen>
+    <TongGio>9</TongGio>
+    <SoNgay>26</SoNgay>
+    <LuongGio>20</LuongGio>
+    <TongLuong>4680</TongLuong>
+    <Thang>1</Thang>
+    <Nam>2025</Nam>
+  </Luong>
+  <Luong>
+    <MaNV>NV002</MaNV>
+    <HoTen>tu</HoTen>
+    <TongGio>9</TongGio>
+    <SoNgay>26</SoNgay>
+    <LuongGio>20</LuongGio>
+    <TongLuong>4680</TongLuong>
+    <Thang>12</Thang>
+    <Nam>2025</Nam>
+  </Luong>
+  <Luong>
+    <MaNV>NV003</MaNV>
+    <HoTen>thanhtu</HoTen>
+    <TongGio>3</TongGio>
+    <SoNgay>20</SoNgay>
+    <LuongGio>19</LuongGio>
+    <TongLuong>1140</TongLuong>
+    <Thang>11</Thang>
+    <Nam>2025</Nam>
+  </Luong>
+  <Luong>
+    <MaNV>NV003</MaNV>
+    <HoTen>thanhtu</HoTen>
+    <TongGio>2</TongGio>
+    <SoNgay>20</SoNgay>
+    <LuongGio>19</LuongGio>
+    <TongLuong>760</TongLuong>
+    <Thang>12</Thang>
+    <Nam>2025</Nam>
+  </Luong>
+  <Luong>
+    <MaNV>NV002</MaNV>
+    <HoTen>tu</HoTen>
+    <TongGio>3</TongGio>
+    <SoNgay>20</SoNgay>
+    <LuongGio>19</LuongGio>
+    <TongLuong>1140</TongLuong>
+    <Thang>11</Thang>
+    <Nam>2025</Nam>
+  </Luong>
+</DanhSachLuong>

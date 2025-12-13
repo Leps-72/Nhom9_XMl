@@ -203,7 +203,7 @@ namespace QuanLyQuanCaPhe.GUI
 
         private void doanhThuNhanVienToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MoFormCon(new Form_TinhLuong());
         }
 
         private void nhanVienToolStripMenuItem_Click(object sender, EventArgs e)

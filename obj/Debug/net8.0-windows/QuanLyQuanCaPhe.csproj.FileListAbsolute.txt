@@ -106,3 +106,4 @@ C:\Users\thanh\source\repos\QuanLyQuanCaPhe\bin\Debug\net8.0-windows\runtimes\wi
 C:\Users\thanh\source\repos\QuanLyQuanCaPhe\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\thanh\source\repos\QuanLyQuanCaPhe\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.csproj.AssemblyReference.cache
 C:\Users\thanh\source\repos\QuanLyQuanCaPhe\obj\Debug\net8.0-windows\QuanLyQu.E4A908DB.Up2Date
+C:\Users\thanh\source\repos\QuanLyQuanCaPhe\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_TinhLuong.resources

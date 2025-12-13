@@ -31,5 +31,8 @@
     <Compile Update="GUI\Form_NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Form_TinhLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
