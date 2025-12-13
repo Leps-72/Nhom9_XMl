@@ -24,4 +24,20 @@
     <DonGia>45000</DonGia>
     <ThanhTien>135000</ThanhTien>
   </ChiTiet>
+  <ChiTiet>
+    <MaHD>HD003</MaHD>
+    <MaMon>CFSUADA</MaMon>
+    <TenMon>Cà phê sữa đá</TenMon>
+    <SoLuong>2</SoLuong>
+    <DonGia>25000</DonGia>
+    <ThanhTien>50000</ThanhTien>
+  </ChiTiet>
+  <ChiTiet>
+    <MaHD>HD003</MaHD>
+    <MaMon>TRVAI</MaMon>
+    <TenMon>Trà vải</TenMon>
+    <SoLuong>1</SoLuong>
+    <DonGia>32000</DonGia>
+    <ThanhTien>32000</ThanhTien>
+  </ChiTiet>
 </ChiTietHoaDons>

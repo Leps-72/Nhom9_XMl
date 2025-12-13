@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using System.Drawing;
 using QuanLyQuanCaPhe.DAL;
 using QuanLyQuanCaPhe.Models;
 
@@ -11,7 +12,9 @@ namespace QuanLyQuanCaPhe.GUI
     public partial class Form_BanHang : Form
     {
         private readonly MonDAL _monDal = new MonDAL();
+        private readonly DanhMucDAL _dmDal = new DanhMucDAL();
 
+        private Dictionary<string, string> _mapMaDM_TenDM = new(); // MaDM -> TenDM
         private List<Mon> _allMon = new();
         private List<OrderItem> _order = new();
 
@@ -50,11 +53,21 @@ namespace QuanLyQuanCaPhe.GUI
             SetupDgvMon();
             SetupDgvOrder();
             SetupDgvFont();
+            TuningDgvLayout();
 
-            // Load món từ XML
+            // ===== Load danh mục + map =====
+            var dsDM = _dmDal.GetAll();
+            _mapMaDM_TenDM = _dmDal.GetMapMaDM_TenDM();
+
+            // Đổ cboDanhMuc theo TenDM
+            var tenDMs = dsDM.Select(x => x.TenDM).Where(s => !string.IsNullOrWhiteSpace(s))
+                             .Distinct().OrderBy(s => s).ToList();
+            tenDMs.Insert(0, "Tất cả");
+            cboDanhMuc.DataSource = tenDMs;
+
+            // ===== Load món từ XML (Mon.xml đã dùng MaDM) =====
             _allMon = _monDal.GetAll();
 
-            LoadDanhMuc();
             LoadBanDemo();              // vì bạn chưa có Ban.xml
             txtNhanVien.Text = "NV01";  // tạm (sau lấy từ đăng nhập)
 
@@ -80,21 +93,32 @@ namespace QuanLyQuanCaPhe.GUI
                 Name = "MaMon",
                 HeaderText = "Mã món",
                 DataPropertyName = "MaMon",
-                FillWeight = 20
+                FillWeight = 15
             });
+
             dgvMon.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "TenMon",
                 HeaderText = "Tên món",
                 DataPropertyName = "TenMon",
-                FillWeight = 55
+                FillWeight = 45
             });
+            /*
+            // ✅ Hiển thị tên danh mục cho dễ nhìn
+            dgvMon.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "DanhMuc",
+                HeaderText = "Danh mục",
+                DataPropertyName = "DanhMuc",
+                FillWeight = 20
+            });*/
+
             dgvMon.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "DonGia",
                 HeaderText = "Đơn giá",
                 DataPropertyName = "DonGia",
-                FillWeight = 25,
+                FillWeight = 20,
                 DefaultCellStyle = new DataGridViewCellStyle
                 {
                     Format = "N0",
@@ -121,6 +145,7 @@ namespace QuanLyQuanCaPhe.GUI
                 DataPropertyName = "MaMon",
                 Visible = false
             });
+
             dgvOrder.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "TenMon",
@@ -129,6 +154,7 @@ namespace QuanLyQuanCaPhe.GUI
                 FillWeight = 45,
                 ReadOnly = true
             });
+
             dgvOrder.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "SoLuong",
@@ -136,6 +162,7 @@ namespace QuanLyQuanCaPhe.GUI
                 DataPropertyName = "SoLuong",
                 FillWeight = 12
             });
+
             dgvOrder.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "DonGia",
@@ -149,6 +176,7 @@ namespace QuanLyQuanCaPhe.GUI
                     Alignment = DataGridViewContentAlignment.MiddleRight
                 }
             });
+
             dgvOrder.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "ThanhTien",
@@ -163,37 +191,18 @@ namespace QuanLyQuanCaPhe.GUI
                 }
             });
         }
+
         private void SetupDgvFont()
         {
-            // ===== dgvMon =====
             dgvMon.EnableHeadersVisualStyles = false;
-            dgvMon.ColumnHeadersDefaultCellStyle.Font =
-                new Font("Segoe UI", 10F, FontStyle.Bold);
-
-            dgvMon.DefaultCellStyle.Font =
-                new Font("Segoe UI", 9.5F);
-
+            dgvMon.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dgvMon.DefaultCellStyle.Font = new Font("Segoe UI", 9.5F);
             dgvMon.RowTemplate.Height = 32;
 
-            // ===== dgvOrder =====
             dgvOrder.EnableHeadersVisualStyles = false;
-            dgvOrder.ColumnHeadersDefaultCellStyle.Font =
-                new Font("Segoe UI", 10F, FontStyle.Bold);
-
-            dgvOrder.DefaultCellStyle.Font =
-                new Font("Segoe UI", 9.5F);
-
+            dgvOrder.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dgvOrder.DefaultCellStyle.Font = new Font("Segoe UI", 9.5F);
             dgvOrder.RowTemplate.Height = 32;
-        }
-
-
-        // ====== Load danh mục ======
-        private void LoadDanhMuc()
-        {
-            var dms = _allMon.Select(x => x.DanhMuc).Where(s => !string.IsNullOrWhiteSpace(s))
-                .Distinct().OrderBy(s => s).ToList();
-            dms.Insert(0, "Tất cả");
-            cboDanhMuc.DataSource = dms;
         }
 
         // ====== Bàn demo (chưa có Ban.xml) ======
@@ -209,14 +218,25 @@ namespace QuanLyQuanCaPhe.GUI
         // ====== Lọc món theo danh mục + tìm ======
         private void ApplyFilterMon()
         {
-            string dm = cboDanhMuc.Text?.Trim() ?? "Tất cả";
+            string tenDM = cboDanhMuc.Text?.Trim() ?? "Tất cả";
             string key = (txtTimMon.Text ?? "").Trim().ToLower();
 
             var q = _allMon.AsEnumerable();
 
-            if (dm != "Tất cả") q = q.Where(m => m.DanhMuc == dm);
+            // lọc theo danh mục: TenDM -> MaDM
+            if (tenDM != "Tất cả")
+            {
+                string maDM = _mapMaDM_TenDM.FirstOrDefault(kv => kv.Value == tenDM).Key;
+                if (!string.IsNullOrWhiteSpace(maDM))
+                    q = q.Where(m => m.MaDM == maDM);
+                else
+                    q = Enumerable.Empty<Mon>();
+            }
+
             if (!string.IsNullOrWhiteSpace(key))
-                q = q.Where(m => m.TenMon.ToLower().Contains(key) || m.MaMon.ToLower().Contains(key));
+                q = q.Where(m =>
+                    (m.TenMon ?? "").ToLower().Contains(key) ||
+                    (m.MaMon ?? "").ToLower().Contains(key));
 
             dgvMon.DataSource = q.Select(m => new { m.MaMon, m.TenMon, m.DonGia }).ToList();
         }
@@ -264,7 +284,6 @@ namespace QuanLyQuanCaPhe.GUI
             var item = _order.FirstOrDefault(x => x.MaMon == maMon);
             if (item == null) return;
 
-            // đọc SL
             int sl = 1;
             var cellVal = dgvOrder.Rows[e.RowIndex].Cells["SoLuong"].Value?.ToString();
             if (!int.TryParse(cellVal, out sl) || sl < 1) sl = 1;
@@ -347,17 +366,32 @@ namespace QuanLyQuanCaPhe.GUI
                 return;
             }
 
-            // truyền sang hóa đơn
             var list = _order.Select(x => (x.MaMon, x.TenMon, x.SoLuong, x.DonGia)).ToList();
 
             var f = new Form_HoaDon();
             f.SetChiTietFromOrder(list);
             f.ShowDialog();
         }
-
-        private void dgvMon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void TuningDgvLayout()
         {
+            // ===== dgvMon =====
+            dgvMon.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
+            dgvMon.ColumnHeadersHeight = 36;
+            dgvMon.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
 
+            dgvMon.Columns["MaMon"].FillWeight = 30;
+            dgvMon.Columns["TenMon"].FillWeight = 45;
+            dgvMon.Columns["DonGia"].FillWeight = 35;
+
+            // ===== dgvOrder =====
+            dgvOrder.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
+            dgvOrder.ColumnHeadersHeight = 36;
+            dgvOrder.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+
+            dgvOrder.Columns["TenMon"].FillWeight = 40;
+            dgvOrder.Columns["SoLuong"].FillWeight = 15;
+            dgvOrder.Columns["DonGia"].FillWeight = 20;
+            dgvOrder.Columns["ThanhTien"].FillWeight = 25;
         }
     }
 }

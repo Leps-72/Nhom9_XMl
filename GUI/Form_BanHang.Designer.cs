@@ -72,10 +72,10 @@
             // dgvOrder
             // 
             dgvOrder.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvOrder.Location = new Point(29, 170);
+            dgvOrder.Location = new Point(6, 176);
             dgvOrder.Name = "dgvOrder";
             dgvOrder.RowHeadersWidth = 51;
-            dgvOrder.Size = new Size(346, 255);
+            dgvOrder.Size = new Size(390, 249);
             dgvOrder.TabIndex = 6;
             // 
             // label5
@@ -241,9 +241,9 @@
             groupBox2.Controls.Add(label6);
             groupBox2.Controls.Add(label5);
             groupBox2.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(27, 110);
+            groupBox2.Location = new Point(12, 110);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(383, 429);
+            groupBox2.Size = new Size(398, 429);
             groupBox2.TabIndex = 25;
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh mục + Món";
@@ -252,12 +252,11 @@
             // 
             dgvMon.AccessibleDescription = "f";
             dgvMon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMon.Location = new Point(21, 176);
+            dgvMon.Location = new Point(0, 176);
             dgvMon.Name = "dgvMon";
             dgvMon.RowHeadersWidth = 51;
-            dgvMon.Size = new Size(343, 247);
+            dgvMon.Size = new Size(398, 247);
             dgvMon.TabIndex = 25;
-            dgvMon.CellContentClick += dgvMon_CellContentClick;
             // 
             // cboDanhMuc
             // 

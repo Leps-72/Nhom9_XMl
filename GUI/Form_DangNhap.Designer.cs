@@ -40,7 +40,7 @@
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Location = new Point(435, 73);
+            lblTitle.Location = new Point(99, 71);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(173, 20);
             lblTitle.TabIndex = 0;
@@ -50,7 +50,7 @@
             // txtTenDangNhap
             // 
             txtTenDangNhap.ForeColor = Color.Gray;
-            txtTenDangNhap.Location = new Point(414, 159);
+            txtTenDangNhap.Location = new Point(78, 157);
             txtTenDangNhap.Name = "txtTenDangNhap";
             txtTenDangNhap.Size = new Size(251, 27);
             txtTenDangNhap.TabIndex = 1;
@@ -58,14 +58,14 @@
             // txtMatKhau
             // 
             txtMatKhau.ForeColor = Color.Gray;
-            txtMatKhau.Location = new Point(414, 233);
+            txtMatKhau.Location = new Point(78, 231);
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.Size = new Size(251, 27);
             txtMatKhau.TabIndex = 2;
             // 
             // btnDangNhap
             // 
-            btnDangNhap.Location = new Point(450, 284);
+            btnDangNhap.Location = new Point(114, 282);
             btnDangNhap.Name = "btnDangNhap";
             btnDangNhap.Size = new Size(173, 55);
             btnDangNhap.TabIndex = 3;
@@ -76,7 +76,7 @@
             // lnkDangKy
             // 
             lnkDangKy.AutoSize = true;
-            lnkDangKy.Location = new Point(450, 392);
+            lnkDangKy.Location = new Point(114, 390);
             lnkDangKy.Name = "lnkDangKy";
             lnkDangKy.Size = new Size(184, 20);
             lnkDangKy.TabIndex = 4;
@@ -87,7 +87,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(414, 125);
+            label1.Location = new Point(78, 123);
             label1.Name = "label1";
             label1.Size = new Size(107, 20);
             label1.TabIndex = 5;
@@ -96,7 +96,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(414, 201);
+            label2.Location = new Point(78, 199);
             label2.Name = "label2";
             label2.Size = new Size(70, 20);
             label2.TabIndex = 6;
@@ -107,7 +107,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1182, 553);
+            ClientSize = new Size(413, 483);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lnkDangKy);
