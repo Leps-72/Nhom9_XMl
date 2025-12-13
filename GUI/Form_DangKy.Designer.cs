@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DangKy));
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -81,6 +82,7 @@
             btnDangKy.TabIndex = 15;
             btnDangKy.Text = "Đăng Ký";
             btnDangKy.UseVisualStyleBackColor = true;
+            btnDangKy.Click += btnDangKy_Click;
             // 
             // txtMatKhau
             // 
@@ -111,6 +113,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(412, 483);
             Controls.Add(label3);
             Controls.Add(label2);

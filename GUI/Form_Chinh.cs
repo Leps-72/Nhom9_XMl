@@ -28,6 +28,10 @@ namespace QuanLyQuanCaPhe.GUI
         // Constructor nhận đủ thông tin từ Form Đăng nhập
         public Form_Chinh(string tenDangNhap, string hoTenNhanVien, string quyen)
         {
+            this.BackgroundImage = Properties.Resources.bautroi;
+
+            // Dòng này làm ảnh full form, đẹp nhất (thử từng cái nếu cần)
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             InitializeComponent();
             this.userName = tenDangNhap;
             this.hoTen = hoTenNhanVien;
@@ -173,7 +177,8 @@ namespace QuanLyQuanCaPhe.GUI
 
         private void Form_Chinh_Load(object sender, EventArgs e)
         {
-
+            this.BackgroundImage = Properties.Resources.bautroi;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
 

@@ -1784,23 +1784,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\huynh\\.nuget\\packages\\": {},
+    "C:\\Users\\thanh\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\125\\Nhom9_XMl\\QuanLyQuanCaPhe.csproj",
+      "projectUniqueName": "C:\\Users\\thanh\\source\\repos\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj",
       "projectName": "QuanLyQuanCaPhe",
-      "projectPath": "E:\\125\\Nhom9_XMl\\QuanLyQuanCaPhe.csproj",
-      "packagesPath": "C:\\Users\\huynh\\.nuget\\packages\\",
-      "outputPath": "E:\\125\\Nhom9_XMl\\obj\\",
+      "projectPath": "C:\\Users\\thanh\\source\\repos\\QuanLyQuanCaPhe\\QuanLyQuanCaPhe.csproj",
+      "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\thanh\\source\\repos\\QuanLyQuanCaPhe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\huynh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1827,7 +1827,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -1865,16 +1865,8 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: The download of 'https://api.nuget.org/v3-vulnerabilities/2025.12.10.23.26.49/vulnerability.base.json' timed out because no data was received for 60000ms."
-    }
-  ]
+  }
 }

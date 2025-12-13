@@ -164,3 +164,5 @@ D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.genruntimeconfig.cache
 D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\ref\QuanLyQuanCaPhe.dll
 D:\XML\Nhom9_XMl\bin\Debug\net8.0-windows\System.Windows.Forms.DataVisualization.dll
 D:\XML\Nhom9_XMl\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_ThongKeMon.resources
+C:\Users\thanh\source\repos\QuanLyQuanCaPhe\bin\Debug\net8.0-windows\System.Windows.Forms.DataVisualization.dll
+C:\Users\thanh\source\repos\QuanLyQuanCaPhe\obj\Debug\net8.0-windows\QuanLyQuanCaPhe.GUI.Form_ThongKeMon.resources

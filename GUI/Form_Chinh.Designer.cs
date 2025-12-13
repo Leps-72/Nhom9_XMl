@@ -53,7 +53,10 @@
             thôngTinPhầnMềmToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             statusStrip1 = new StatusStrip();
+            panel1 = new Panel();
+            label2 = new Label();
             menuStrip1.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -232,12 +235,38 @@
             statusStrip1.TabIndex = 1;
             statusStrip1.Text = "statusStrip1";
             // 
+            // panel1
+            // 
+            panel1.BackgroundImage = Properties.Resources.bautroi;
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(label2);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 28);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1182, 525);
+            panel1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.Location = new Point(315, 36);
+            label2.Name = "label2";
+            label2.Size = new Size(506, 41);
+            label2.TabIndex = 0;
+            label2.Text = "Chào mừng đến với quản lý cà phê";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Form_Chinh
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Info;
+            BackColor = Color.White;
+            BackgroundImage = Properties.Resources.bautroi;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1182, 553);
+            Controls.Add(panel1);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip1;
@@ -248,6 +277,8 @@
             Load += Form_Chinh_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -280,5 +311,7 @@
         private Label label1;
         private StatusStrip statusStrip1;
         private ToolStripMenuItem orderToolStripMenuItem;
+        private Panel panel1;
+        private Label label2;
     }
 }
