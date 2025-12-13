@@ -278,6 +278,7 @@
             Controls.Add(pnlChiTiet);
             Controls.Add(pnlDanhSach);
             Name = "Form_Ban";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_Ban";
             pnlDanhSach.ResumeLayout(false);
             pnlDanhSach.PerformLayout();

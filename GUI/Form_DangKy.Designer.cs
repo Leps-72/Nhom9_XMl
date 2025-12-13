@@ -28,92 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            txtHoTen = new TextBox();
             btnDangKy = new Button();
             txtMatKhau = new TextBox();
             txtTenDangNhap = new TextBox();
             lblTitle = new Label();
-            txtHoTen = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
             SuspendLayout();
-            // 
-            // btnDangKy
-            // 
-            btnDangKy.Location = new Point(482, 355);
-            btnDangKy.Name = "btnDangKy";
-            btnDangKy.Size = new Size(173, 55);
-            btnDangKy.TabIndex = 7;
-            btnDangKy.Text = "Đăng Ký";
-            btnDangKy.UseVisualStyleBackColor = true;
-            btnDangKy.Click += btnDangKy_Click;
-            // 
-            // txtMatKhau
-            // 
-            txtMatKhau.ForeColor = Color.Gray;
-            txtMatKhau.Location = new Point(451, 295);
-            txtMatKhau.Name = "txtMatKhau";
-            txtMatKhau.Size = new Size(251, 27);
-            txtMatKhau.TabIndex = 6;
-            txtMatKhau.TextChanged += txtMatKhau_TextChanged;
-            // 
-            // txtTenDangNhap
-            // 
-            txtTenDangNhap.ForeColor = Color.Gray;
-            txtTenDangNhap.Location = new Point(451, 229);
-            txtTenDangNhap.Name = "txtTenDangNhap";
-            txtTenDangNhap.Size = new Size(251, 27);
-            txtTenDangNhap.TabIndex = 5;
-            // 
-            // lblTitle
-            // 
-            lblTitle.AutoSize = true;
-            lblTitle.Location = new Point(502, 93);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(153, 20);
-            lblTitle.TabIndex = 4;
-            lblTitle.Text = "ĐĂNG KÝ TÀI KHOẢN";
-            // 
-            // txtHoTen
-            // 
-            txtHoTen.ForeColor = Color.Gray;
-            txtHoTen.Location = new Point(451, 166);
-            txtHoTen.Name = "txtHoTen";
-            txtHoTen.Size = new Size(251, 27);
-            txtHoTen.TabIndex = 8;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(451, 134);
-            label1.Name = "label1";
-            label1.Size = new Size(54, 20);
-            label1.TabIndex = 9;
-            label1.Text = "Họ tên";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(451, 206);
-            label2.Name = "label2";
-            label2.Size = new Size(88, 20);
-            label2.TabIndex = 10;
-            label2.Text = "Tên đăng ký";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(451, 272);
+            label3.Location = new Point(75, 251);
             label3.Name = "label3";
             label3.Size = new Size(70, 20);
-            label3.TabIndex = 11;
+            label3.TabIndex = 19;
             label3.Text = "Mật khẩu";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(75, 185);
+            label2.Name = "label2";
+            label2.Size = new Size(88, 20);
+            label2.TabIndex = 18;
+            label2.Text = "Tên đăng ký";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(75, 113);
+            label1.Name = "label1";
+            label1.Size = new Size(54, 20);
+            label1.TabIndex = 17;
+            label1.Text = "Họ tên";
+            // 
+            // txtHoTen
+            // 
+            txtHoTen.ForeColor = Color.Gray;
+            txtHoTen.Location = new Point(75, 145);
+            txtHoTen.Name = "txtHoTen";
+            txtHoTen.Size = new Size(251, 27);
+            txtHoTen.TabIndex = 16;
+            // 
+            // btnDangKy
+            // 
+            btnDangKy.Location = new Point(106, 334);
+            btnDangKy.Name = "btnDangKy";
+            btnDangKy.Size = new Size(173, 55);
+            btnDangKy.TabIndex = 15;
+            btnDangKy.Text = "Đăng Ký";
+            btnDangKy.UseVisualStyleBackColor = true;
+            // 
+            // txtMatKhau
+            // 
+            txtMatKhau.ForeColor = Color.Gray;
+            txtMatKhau.Location = new Point(75, 274);
+            txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.Size = new Size(251, 27);
+            txtMatKhau.TabIndex = 14;
+            // 
+            // txtTenDangNhap
+            // 
+            txtTenDangNhap.ForeColor = Color.Gray;
+            txtTenDangNhap.Location = new Point(75, 208);
+            txtTenDangNhap.Name = "txtTenDangNhap";
+            txtTenDangNhap.Size = new Size(251, 27);
+            txtTenDangNhap.TabIndex = 13;
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Location = new Point(126, 72);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(153, 20);
+            lblTitle.TabIndex = 12;
+            lblTitle.Text = "ĐĂNG KÝ TÀI KHOẢN";
             // 
             // Form_DangKy
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1182, 553);
+            ClientSize = new Size(412, 483);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -123,6 +121,7 @@
             Controls.Add(txtTenDangNhap);
             Controls.Add(lblTitle);
             Name = "Form_DangKy";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_DangKy";
             Load += Form_DangKy_Load;
             ResumeLayout(false);
@@ -131,13 +130,13 @@
 
         #endregion
 
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private TextBox txtHoTen;
         private Button btnDangKy;
         private TextBox txtMatKhau;
         private TextBox txtTenDangNhap;
         private Label lblTitle;
-        private TextBox txtHoTen;
-        private Label label1;
-        private Label label2;
-        private Label label3;
     }
 }

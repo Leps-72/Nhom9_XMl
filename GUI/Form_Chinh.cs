@@ -42,7 +42,6 @@ namespace QuanLyQuanCaPhe.GUI
         {
             // Form chính
             this.Text = "QUẢN LÝ QUÁN CÀ PHÊ - WELCOME";
-            this.WindowState = FormWindowState.Maximized;
             this.BackColor = Color.FromArgb(245, 242, 237); // màu kem cà phê nhẹ
             this.IsMdiContainer = true;
 
@@ -55,7 +54,7 @@ namespace QuanLyQuanCaPhe.GUI
             this.Controls.Add(panelNoiDung);
 
             // StatusStrip dưới cùng
-            statusStrip = new StatusStrip();
+            statusStrip = new StatusStrip();    
             lblUser = new ToolStripStatusLabel();
             lblTime = new ToolStripStatusLabel();
             lblTime.Alignment = ToolStripItemAlignment.Right;
@@ -222,12 +221,7 @@ namespace QuanLyQuanCaPhe.GUI
 
         private void orderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form_BanHang f = new Form_BanHang();
-            f.FormClosed += (s, args) =>
-            {
-                this.Show();
-            };
             f.Show();
         }
 

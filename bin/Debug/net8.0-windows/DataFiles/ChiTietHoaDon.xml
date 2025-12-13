@@ -40,4 +40,20 @@
     <DonGia>32000</DonGia>
     <ThanhTien>32000</ThanhTien>
   </ChiTiet>
+  <ChiTiet>
+    <MaHD>HD004</MaHD>
+    <MaMon>BANH01</MaMon>
+    <TenMon>Bánh tiramisu</TenMon>
+    <SoLuong>1</SoLuong>
+    <DonGia>45000</DonGia>
+    <ThanhTien>45000</ThanhTien>
+  </ChiTiet>
+  <ChiTiet>
+    <MaHD>HD005</MaHD>
+    <MaMon>BANH01</MaMon>
+    <TenMon>Bánh tiramisu</TenMon>
+    <SoLuong>1</SoLuong>
+    <DonGia>45000</DonGia>
+    <ThanhTien>45000</ThanhTien>
+  </ChiTiet>
 </ChiTietHoaDons>

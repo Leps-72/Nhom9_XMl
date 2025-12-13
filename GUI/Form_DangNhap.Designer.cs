@@ -107,7 +107,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(413, 483);
+            ClientSize = new Size(412, 483);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lnkDangKy);
@@ -116,6 +116,7 @@
             Controls.Add(txtTenDangNhap);
             Controls.Add(lblTitle);
             Name = "Form_DangNhap";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_DangNhap";
             Load += Form_DangNhap_Load;
             ResumeLayout(false);

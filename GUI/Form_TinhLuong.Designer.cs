@@ -154,6 +154,7 @@
             Controls.Add(cboNhanVien);
             Controls.Add(lblNhanVien);
             Name = "Form_TinhLuong";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_TinhLuong";
             ((System.ComponentModel.ISupportInitialize)dgvLuong).EndInit();
             ResumeLayout(false);

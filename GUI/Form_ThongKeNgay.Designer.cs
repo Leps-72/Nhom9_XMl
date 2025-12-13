@@ -143,6 +143,7 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Name = "Form_ThongKeNgay";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_ThongKeNgay";
             ((System.ComponentModel.ISupportInitialize)dgvDoanhThu).EndInit();
             ResumeLayout(false);

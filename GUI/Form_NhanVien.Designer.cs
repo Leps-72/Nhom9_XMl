@@ -242,6 +242,7 @@
             Controls.Add(label1);
             Controls.Add(txtMaNV);
             Name = "Form_NhanVien";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_NhanVien";
             Load += Form_NhanVien_Load;
             ((System.ComponentModel.ISupportInitialize)dgvChamCong).EndInit();

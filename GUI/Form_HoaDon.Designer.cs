@@ -214,6 +214,7 @@
             Controls.Add(label2);
             Controls.Add(dgvChiTietHD);
             Name = "Form_HoaDon";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_HoaDon";
             ((System.ComponentModel.ISupportInitialize)dgvChiTietHD).EndInit();
             ResumeLayout(false);

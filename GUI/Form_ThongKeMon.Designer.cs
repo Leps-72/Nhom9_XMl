@@ -49,9 +49,7 @@
             // sqlCommand1
             // 
             sqlCommand1.CommandTimeout = 30;
-            sqlCommand1.Connection = null;
-            sqlCommand1.Notification = null;
-            sqlCommand1.Transaction = null;
+            sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
             // label5
             // 
@@ -100,6 +98,7 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Name = "Form_ThongKeMon";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_ThongKeMon";
             ResumeLayout(false);
             PerformLayout();

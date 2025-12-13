@@ -43,4 +43,18 @@
     <ThanhTien>0</ThanhTien>
     <HinhThucThanhToan>TienMat</HinhThucThanhToan>
   </HoaDon>
+  <HoaDon MaHD="HD004">
+    <NgayLap>2025-12-13T18:32:01</NgayLap>
+    <TongTien>45000</TongTien>
+    <GiamGiaPercent>0</GiamGiaPercent>
+    <ThanhTien>45000</ThanhTien>
+    <HinhThucThanhToan>TienMat</HinhThucThanhToan>
+  </HoaDon>
+  <HoaDon MaHD="HD005">
+    <NgayLap>2025-12-13T18:37:56</NgayLap>
+    <TongTien>45000</TongTien>
+    <GiamGiaPercent>0</GiamGiaPercent>
+    <ThanhTien>45000</ThanhTien>
+    <HinhThucThanhToan>TienMat</HinhThucThanhToan>
+  </HoaDon>
 </HoaDons>

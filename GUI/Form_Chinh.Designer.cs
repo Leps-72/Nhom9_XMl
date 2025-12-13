@@ -241,10 +241,10 @@
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
             Name = "Form_Chinh";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_Chinh";
-            WindowState = FormWindowState.Maximized;
             Load += Form_Chinh_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

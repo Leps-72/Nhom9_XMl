@@ -484,6 +484,7 @@
             ClientSize = new Size(1182, 553);
             Controls.Add(tabControl1);
             Name = "Form_QuanLySanPhamDanhMuc";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_QuanLySanPhamDanhMuc";
             tabControl1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
