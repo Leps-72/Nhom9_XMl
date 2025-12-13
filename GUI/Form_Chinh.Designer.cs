@@ -76,21 +76,21 @@
             // dangNhapToolStripMenuItem
             // 
             dangNhapToolStripMenuItem.Name = "dangNhapToolStripMenuItem";
-            dangNhapToolStripMenuItem.Size = new Size(224, 26);
+            dangNhapToolStripMenuItem.Size = new Size(165, 26);
             dangNhapToolStripMenuItem.Text = "Đăng nhập";
             dangNhapToolStripMenuItem.Click += dangNhapToolStripMenuItem_Click;
             // 
             // dangKyToolStripMenuItem
             // 
             dangKyToolStripMenuItem.Name = "dangKyToolStripMenuItem";
-            dangKyToolStripMenuItem.Size = new Size(224, 26);
+            dangKyToolStripMenuItem.Size = new Size(165, 26);
             dangKyToolStripMenuItem.Text = "Đăng ký";
             dangKyToolStripMenuItem.Click += dangKyToolStripMenuItem_Click;
             // 
             // thoatToolStripMenuItem
             // 
             thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            thoatToolStripMenuItem.Size = new Size(224, 26);
+            thoatToolStripMenuItem.Size = new Size(165, 26);
             thoatToolStripMenuItem.Text = "Thoát";
             thoatToolStripMenuItem.Click += thoatToolStripMenuItem_Click;
             // 
@@ -113,6 +113,7 @@
             banToolStripMenuItem.Name = "banToolStripMenuItem";
             banToolStripMenuItem.Size = new Size(235, 26);
             banToolStripMenuItem.Text = "Bàn";
+            banToolStripMenuItem.Click += banToolStripMenuItem_Click;
             // 
             // khuVucToolStripMenuItem
             // 
