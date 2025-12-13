@@ -68,5 +68,119 @@ namespace QuanLyQuanCaPhe.DAL
 
             docCT.Save(Utility.PathChiTietHoaDon);
         }
+        public List<HoaDon> GetHoaDonByDate(DateTime tuNgay, DateTime denNgay)
+        {
+            var docHD = XDocument.Load(Utility.PathHoaDon);
+
+            var list = docHD.Descendants("HoaDon")
+                .Select(x =>
+                {
+                    // Ngày lập
+                    DateTime ngayLap;
+                    DateTime.TryParse(
+                        (string)x.Element("NgayLap"),
+                        out ngayLap
+                    );
+
+                    // Tổng tiền
+                    decimal tongTien;
+                    decimal.TryParse(
+                        (string)x.Element("TongTien"),
+                        NumberStyles.Any,
+                        CultureInfo.InvariantCulture,
+                        out tongTien
+                    );
+
+                    // Giảm giá %
+                    decimal giamGiaPercent;
+                    decimal.TryParse(
+                        (string)x.Element("GiamGiaPercent"),
+                        NumberStyles.Any,
+                        CultureInfo.InvariantCulture,
+                        out giamGiaPercent
+                    );
+
+                    // Thành tiền
+                    decimal thanhTien;
+                    decimal.TryParse(
+                        (string)x.Element("ThanhTien"),
+                        NumberStyles.Any,
+                        CultureInfo.InvariantCulture,
+                        out thanhTien
+                    );
+
+                    return new HoaDon
+                    {
+                        MaHD = (string)x.Attribute("MaHD") ?? "",
+                        NgayLap = ngayLap,
+                        TongTien = tongTien,
+                        GiamGiaPercent = giamGiaPercent,
+                        ThanhTien = thanhTien,
+                        HinhThucThanhToan = (string)x.Element("HinhThucThanhToan") ?? ""
+                    };
+                })
+                .Where(hd =>
+                    hd.NgayLap.Date >= tuNgay.Date &&
+                    hd.NgayLap.Date <= denNgay.Date
+                )
+                .ToList();
+
+            return list;
+        }
+        public List<HoaDon> GetAllHoaDon()
+        {
+            var docHD = XDocument.Load(Utility.PathHoaDon);
+
+            var list = docHD.Descendants("HoaDon")
+                .Select(x =>
+                {
+                    // Ngày lập
+                    DateTime ngayLap;
+                    DateTime.TryParse(
+                        (string)x.Element("NgayLap"),
+                        out ngayLap
+                    );
+
+                    // Tổng tiền
+                    decimal tongTien;
+                    decimal.TryParse(
+                        (string)x.Element("TongTien"),
+                        NumberStyles.Any,
+                        CultureInfo.InvariantCulture,
+                        out tongTien
+                    );
+
+                    // Giảm giá %
+                    decimal giamGiaPercent;
+                    decimal.TryParse(
+                        (string)x.Element("GiamGiaPercent"),
+                        NumberStyles.Any,
+                        CultureInfo.InvariantCulture,
+                        out giamGiaPercent
+                    );
+
+                    // Thành tiền
+                    decimal thanhTien;
+                    decimal.TryParse(
+                        (string)x.Element("ThanhTien"),
+                        NumberStyles.Any,
+                        CultureInfo.InvariantCulture,
+                        out thanhTien
+                    );
+
+                    return new HoaDon
+                    {
+                        MaHD = (string)x.Attribute("MaHD") ?? "",
+                        NgayLap = ngayLap,
+                        TongTien = tongTien,
+                        GiamGiaPercent = giamGiaPercent,
+                        ThanhTien = thanhTien,
+                        HinhThucThanhToan = (string)x.Element("HinhThucThanhToan") ?? ""
+                    };
+                })
+                .ToList();
+
+            return list;
+        }
     }
 }

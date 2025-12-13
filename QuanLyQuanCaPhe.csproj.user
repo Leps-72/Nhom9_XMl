@@ -7,7 +7,7 @@
     <Compile Update="GUI\Form_SanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\Form_ThongKeNgay.cs">
+    <Compile Update="GUI\Form_ThongKeMon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Form1.cs">
@@ -29,6 +29,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Form_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Form_ThongKeNgay.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Form_TinhLuong.cs">

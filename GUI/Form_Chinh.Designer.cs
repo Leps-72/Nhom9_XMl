@@ -138,13 +138,13 @@
             // banHangFormToolStripMenuItem
             // 
             banHangFormToolStripMenuItem.Name = "banHangFormToolStripMenuItem";
-            banHangFormToolStripMenuItem.Size = new Size(224, 26);
+            banHangFormToolStripMenuItem.Size = new Size(183, 26);
             banHangFormToolStripMenuItem.Text = "Bàn bán hàng";
             // 
             // orderToolStripMenuItem
             // 
             orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            orderToolStripMenuItem.Size = new Size(224, 26);
+            orderToolStripMenuItem.Size = new Size(183, 26);
             orderToolStripMenuItem.Text = "Order";
             orderToolStripMenuItem.Click += orderToolStripMenuItem_Click;
             // 
@@ -160,12 +160,14 @@
             doanhThuNgayToolStripMenuItem.Name = "doanhThuNgayToolStripMenuItem";
             doanhThuNgayToolStripMenuItem.Size = new Size(259, 26);
             doanhThuNgayToolStripMenuItem.Text = "Doanh thu theo ngày";
+            doanhThuNgayToolStripMenuItem.Click += doanhThuNgayToolStripMenuItem_Click;
             // 
             // doanhThuMonToolStripMenuItem
             // 
             doanhThuMonToolStripMenuItem.Name = "doanhThuMonToolStripMenuItem";
             doanhThuMonToolStripMenuItem.Size = new Size(259, 26);
             doanhThuMonToolStripMenuItem.Text = "Doanh thu theo món";
+            doanhThuMonToolStripMenuItem.Click += doanhThuMonToolStripMenuItem_Click;
             // 
             // doanhThuNhanVienToolStripMenuItem
             // 

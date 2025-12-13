@@ -31,6 +31,8 @@ namespace QuanLyQuanCaPhe.GUI
             // Gắn sự kiện cho txtMatKhau
             txtMatKhau.GotFocus += txtMatKhau_Enter;
             txtMatKhau.LostFocus += txtMatKhau_Leave;
+            txtMatKhau.UseSystemPasswordChar = true;
+            this.AcceptButton = btnDangNhap;
         }
         private void txtTenDangNhap_Enter(object sender, EventArgs e)
         {
@@ -139,6 +141,7 @@ namespace QuanLyQuanCaPhe.GUI
                     );
 
                     formChinh.Show();
+                    this.Hide();
                 }
                 else
                 {

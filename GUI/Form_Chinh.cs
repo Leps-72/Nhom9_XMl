@@ -256,5 +256,15 @@ namespace QuanLyQuanCaPhe.GUI
             };
             frm.Show(); // hoặc frm.ShowDialog() nếu muốn modal
         }
+
+        private void doanhThuMonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MoFormCon(new Form_ThongKeMon());
+        }
+
+        private void doanhThuNgayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MoFormCon(new Form_ThongKeNgay());
+        }
     }
 }
