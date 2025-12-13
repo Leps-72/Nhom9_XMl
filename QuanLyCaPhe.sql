@@ -174,6 +174,32 @@ BEGIN
 END;
 GO
 
+-- Nếu bảng đã có thì xóa trước (để chạy lại nhiều lần không lỗi)
+IF OBJECT_ID('Ban', 'U') IS NOT NULL
+    DROP TABLE Ban
+GO
+
+-- Tạo lại bảng Ban
+CREATE TABLE Ban (
+    MaBan NVARCHAR(50) PRIMARY KEY,
+    TenBan NVARCHAR(100) NOT NULL,
+    KhuVuc NVARCHAR(100) NULL,
+    TrangThai NVARCHAR(50) NOT NULL DEFAULT N'Trống',   -- Trống / Đang phục vụ / Đã đặt trước / Hỏng
+    GhiChu NVARCHAR(255) NULL
+)
+GO
+
+-- Thêm dữ liệu mẫu để test luôn
+INSERT INTO Ban (MaBan, TenBan, KhuVuc, TrangThai, GhiChu) VALUES
+('B001', N'Bàn 1', N'Tầng 1', N'Trống', NULL),
+('B002', N'Bàn 2', N'Tầng 1', N'Trống', NULL),
+('B003', N'Bàn 3', N'Tầng 1', N'Trống', NULL),
+('B004', N'Bàn VIP 1', N'Phòng VIP', N'Trống', N'Bàn lớn 10 người'),
+('B005', N'Bàn ngoài trời 1', N'Sân vườn', N'Trống', NULL)
+GO
+
+PRINT N'Đã tạo bảng Ban thành công!'
+
 -- =============================================
 -- DỮ LIỆU MẪU (TÙY CHỌN)
 -- =============================================
