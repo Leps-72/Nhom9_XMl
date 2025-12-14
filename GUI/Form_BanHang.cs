@@ -1,11 +1,12 @@
-﻿using System;
+﻿using QuanLyQuanCaPhe.DAL;
+using QuanLyQuanCaPhe.Models;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
-using System.Drawing;
-using QuanLyQuanCaPhe.DAL;
-using QuanLyQuanCaPhe.Models;
 
 namespace QuanLyQuanCaPhe.GUI
 {
@@ -21,6 +22,7 @@ namespace QuanLyQuanCaPhe.GUI
         public Form_BanHang()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
 
             Load += Form_BanHang_Load;
 
@@ -74,6 +76,7 @@ namespace QuanLyQuanCaPhe.GUI
             ApplyFilterMon();
             BindOrder();
             UpdateTong();
+            this.Paint += Form_Paint;
         }
 
         // ====== CỘT dgvMon ======
@@ -383,6 +386,55 @@ namespace QuanLyQuanCaPhe.GUI
             dgvMon.Columns["TenMon"].FillWeight = 45;
             dgvMon.Columns["DonGia"].FillWeight = 35;
 
+            // ===== HEADER =====
+            dgvMon.CellPainting += dgv_CellPainting;
+            dgvMon.EnableHeadersVisualStyles = false;
+            dgvMon.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvMon.ColumnHeadersDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            dgvMon.ColumnHeadersHeight = 42;
+            dgvMon.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
+            dgvMon.RowHeadersDefaultCellStyle.BackColor =
+                Color.FromArgb(200, 230, 200);
+
+            // ===== GIÃN FULL CỘT =====
+            dgvMon.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            // ===== BODY =====
+            dgvMon.BackgroundColor = Color.White;
+            dgvMon.GridColor =
+                Color.FromArgb(200, 220, 200);
+
+            dgvMon.DefaultCellStyle.BackColor = Color.White;
+            dgvMon.DefaultCellStyle.ForeColor = Color.Black;
+
+            // chọn dòng
+            dgvMon.DefaultCellStyle.SelectionBackColor =
+                Color.FromArgb(144, 238, 144);   // xanh lục nhạt
+            dgvMon.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            // ===== DÒNG XEN KẼ =====
+            dgvMon.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.FromArgb(230, 245, 235);
+
+            // ===== DÒNG (ROW) =====
+            dgvMon.DefaultCellStyle.Font =
+                new Font("Segoe UI", 9);
+
+            dgvMon.RowTemplate.Height = 38;
+            dgvMon.RowsDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            // ===== READ ONLY + KHÓA =====
+            dgvMon.ReadOnly = true;
+            dgvMon.AllowUserToAddRows = false;
+            dgvMon.AllowUserToResizeRows = false;
+
+
             // ===== dgvOrder =====
             dgvOrder.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
             dgvOrder.ColumnHeadersHeight = 36;
@@ -392,6 +444,132 @@ namespace QuanLyQuanCaPhe.GUI
             dgvOrder.Columns["SoLuong"].FillWeight = 15;
             dgvOrder.Columns["DonGia"].FillWeight = 20;
             dgvOrder.Columns["ThanhTien"].FillWeight = 25;
+            dgvOrder.CellPainting += dgv_CellPainting2;
+            dgvOrder.EnableHeadersVisualStyles = false;
+            dgvOrder.ColumnHeadersDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            dgvOrder.ColumnHeadersHeight = 42;
+            dgvOrder.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
+            dgvOrder.RowHeadersDefaultCellStyle.BackColor =
+                Color.FromArgb(200, 230, 200);
+
+            // ===== GIÃN FULL CỘT =====
+            dgvOrder.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            // ===== BODY =====
+            dgvOrder.BackgroundColor = Color.FromArgb(245, 250, 245);
+            dgvOrder.GridColor =
+                Color.FromArgb(200, 230, 201);
+
+            dgvOrder.DefaultCellStyle.BackColor = Color.White;
+            dgvOrder.DefaultCellStyle.ForeColor = Color.Black;
+
+            // chọn dòng
+            dgvOrder.DefaultCellStyle.SelectionBackColor =
+                Color.FromArgb(200, 230, 201);   // xanh lục nhạt
+            dgvOrder.DefaultCellStyle.SelectionForeColor = Color.FromArgb(33, 33, 33);
+
+            // ===== DÒNG XEN KẼ =====
+            dgvOrder.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.FromArgb(232, 245, 233);
+
+            // ===== DÒNG (ROW) =====
+            dgvOrder.DefaultCellStyle.Font =
+                new Font("Segoe UI", 9);
+
+            dgvOrder.RowTemplate.Height = 38;
+            dgvOrder.RowsDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            // ===== READ ONLY + KHÓA =====
+            dgvOrder.ReadOnly = true;
+            dgvOrder.AllowUserToAddRows = false;
+            dgvOrder.AllowUserToResizeRows = false;
+
+
+        }
+        private void dgv_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // Chỉ vẽ header cột
+            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+            {
+                using (LinearGradientBrush brush = new LinearGradientBrush(
+                    e.CellBounds,
+                    Color.FromArgb(34, 139, 34),   // màu trên
+                    Color.FromArgb(129, 199, 132),    // màu dưới
+                    LinearGradientMode.Horizontal))
+                {
+                    e.Graphics.FillRectangle(brush, e.CellBounds);
+                }
+
+                // Vẽ viền
+                using (Pen pen = new Pen(Color.White))
+                {
+                    e.Graphics.DrawRectangle(pen, e.CellBounds);
+                }
+
+                // Vẽ chữ
+                TextRenderer.DrawText(
+                    e.Graphics,
+                    e.FormattedValue.ToString(),
+                    new Font("Segoe UI", 9, FontStyle.Bold),
+                    e.CellBounds,
+                    Color.White,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+                );
+
+                e.Handled = true;
+            }
+        }
+        private void dgv_CellPainting2(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // Chỉ vẽ header cột
+            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+            {
+                using (LinearGradientBrush brush = new LinearGradientBrush(
+                    e.CellBounds,
+                    Color.FromArgb(76, 175, 80),   // màu trên
+                    Color.FromArgb(129, 199, 132),    // màu dưới
+                    LinearGradientMode.Horizontal))
+                {
+                    e.Graphics.FillRectangle(brush, e.CellBounds);
+                }
+
+                // Vẽ viền
+                using (Pen pen = new Pen(Color.White))
+                {
+                    e.Graphics.DrawRectangle(pen, e.CellBounds);
+                }
+
+                // Vẽ chữ
+                TextRenderer.DrawText(
+                    e.Graphics,
+                    e.FormattedValue.ToString(),
+                    new Font("Segoe UI", 9, FontStyle.Bold),
+                    e.CellBounds,
+                    Color.White,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+                );
+
+                e.Handled = true;
+            }
+        }
+        private void Form_Paint(object sender, PaintEventArgs e)
+        {
+            Rectangle rect = this.ClientRectangle;
+
+            using (LinearGradientBrush brush = new LinearGradientBrush(
+                rect,
+                Color.FromArgb(210, 180, 140),      // nâu cà phê đậm
+                Color.FromArgb(245, 240, 230),   // kem sáng
+                LinearGradientMode.Horizontal))    // trên → dưới
+            {
+                e.Graphics.FillRectangle(brush, rect);
+            }
         }
     }
 }

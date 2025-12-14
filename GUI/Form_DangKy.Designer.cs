@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DangKy));
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -44,6 +43,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            label3.ForeColor = SystemColors.HighlightText;
             label3.Location = new Point(78, 275);
             label3.Name = "label3";
             label3.Size = new Size(84, 23);
@@ -55,6 +55,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.HighlightText;
             label2.Location = new Point(78, 209);
             label2.Name = "label2";
             label2.Size = new Size(103, 23);
@@ -66,6 +67,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.HighlightText;
             label1.Location = new Point(78, 140);
             label1.Name = "label1";
             label1.Size = new Size(63, 23);
@@ -125,7 +127,6 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(412, 483);
             Controls.Add(label3);
             Controls.Add(label2);

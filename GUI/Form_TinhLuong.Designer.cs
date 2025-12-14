@@ -39,22 +39,25 @@
             btnDong = new Button();
             cboThang = new ComboBox();
             label1 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvLuong).BeginInit();
             SuspendLayout();
             // 
             // lblNhanVien
             // 
             lblNhanVien.AutoSize = true;
-            lblNhanVien.Location = new Point(72, 60);
+            lblNhanVien.BackColor = Color.Transparent;
+            lblNhanVien.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            lblNhanVien.Location = new Point(71, 90);
             lblNhanVien.Name = "lblNhanVien";
-            lblNhanVien.Size = new Size(113, 20);
+            lblNhanVien.Size = new Size(136, 23);
             lblNhanVien.TabIndex = 0;
             lblNhanVien.Text = "Chọn nhân viên:";
             // 
             // cboNhanVien
             // 
             cboNhanVien.FormattingEnabled = true;
-            cboNhanVien.Location = new Point(200, 61);
+            cboNhanVien.Location = new Point(213, 89);
             cboNhanVien.Name = "cboNhanVien";
             cboNhanVien.Size = new Size(151, 28);
             cboNhanVien.TabIndex = 1;
@@ -62,43 +65,51 @@
             // lblLuongGio
             // 
             lblLuongGio.AutoSize = true;
-            lblLuongGio.Location = new Point(72, 117);
+            lblLuongGio.BackColor = Color.Transparent;
+            lblLuongGio.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            lblLuongGio.Location = new Point(71, 147);
             lblLuongGio.Name = "lblLuongGio";
-            lblLuongGio.Size = new Size(127, 20);
+            lblLuongGio.Size = new Size(147, 23);
             lblLuongGio.TabIndex = 2;
             lblLuongGio.Text = "Lương/giờ (VND):";
             // 
             // txtLuongGio
             // 
-            txtLuongGio.Location = new Point(200, 110);
+            txtLuongGio.Location = new Point(224, 146);
             txtLuongGio.Name = "txtLuongGio";
             txtLuongGio.Size = new Size(125, 27);
             txtLuongGio.TabIndex = 3;
+            txtLuongGio.TextChanged += txtLuongGio_TextChanged;
             // 
             // lblSoNgay
             // 
             lblSoNgay.AutoSize = true;
-            lblSoNgay.Location = new Point(72, 164);
+            lblSoNgay.BackColor = Color.Transparent;
+            lblSoNgay.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            lblSoNgay.Location = new Point(71, 194);
             lblSoNgay.Name = "lblSoNgay";
-            lblSoNgay.Size = new Size(94, 20);
+            lblSoNgay.Size = new Size(109, 23);
             lblSoNgay.TabIndex = 4;
             lblSoNgay.Text = "Số ngày làm:";
             // 
             // txtSoNgay
             // 
-            txtSoNgay.Location = new Point(200, 161);
+            txtSoNgay.Location = new Point(203, 193);
             txtSoNgay.Name = "txtSoNgay";
             txtSoNgay.Size = new Size(125, 27);
             txtSoNgay.TabIndex = 5;
             // 
             // btnTinhLuong
             // 
-            btnTinhLuong.Location = new Point(384, 130);
+            btnTinhLuong.BackColor = Color.AliceBlue;
+            btnTinhLuong.FlatStyle = FlatStyle.Popup;
+            btnTinhLuong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTinhLuong.Location = new Point(414, 162);
             btnTinhLuong.Name = "btnTinhLuong";
             btnTinhLuong.Size = new Size(109, 58);
             btnTinhLuong.TabIndex = 6;
             btnTinhLuong.Text = "Tính lương";
-            btnTinhLuong.UseVisualStyleBackColor = true;
+            btnTinhLuong.UseVisualStyleBackColor = false;
             btnTinhLuong.Click += btnTinhLuong_Click;
             // 
             // dgvLuong
@@ -107,23 +118,26 @@
             dgvLuong.Location = new Point(75, 238);
             dgvLuong.Name = "dgvLuong";
             dgvLuong.RowHeadersWidth = 51;
-            dgvLuong.Size = new Size(903, 269);
+            dgvLuong.Size = new Size(1016, 269);
             dgvLuong.TabIndex = 7;
             // 
             // btnDong
             // 
-            btnDong.Location = new Point(899, 60);
+            btnDong.BackColor = Color.CornflowerBlue;
+            btnDong.FlatStyle = FlatStyle.Popup;
+            btnDong.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            btnDong.Location = new Point(898, 90);
             btnDong.Name = "btnDong";
             btnDong.Size = new Size(109, 58);
             btnDong.TabIndex = 9;
             btnDong.Text = "Đóng";
-            btnDong.UseVisualStyleBackColor = true;
+            btnDong.UseVisualStyleBackColor = false;
             btnDong.Click += btnDong_Click;
             // 
             // cboThang
             // 
             cboThang.FormattingEnabled = true;
-            cboThang.Location = new Point(615, 60);
+            cboThang.Location = new Point(638, 93);
             cboThang.Name = "cboThang";
             cboThang.Size = new Size(151, 28);
             cboThang.TabIndex = 10;
@@ -131,17 +145,32 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(427, 64);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            label1.Location = new Point(426, 94);
             label1.Name = "label1";
-            label1.Size = new Size(160, 20);
+            label1.Size = new Size(190, 23);
             label1.TabIndex = 11;
             label1.Text = "Chọn tháng tính lương:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Crimson;
+            label4.Location = new Point(335, 21);
+            label4.Name = "label4";
+            label4.Size = new Size(520, 46);
+            label4.TabIndex = 12;
+            label4.Text = "TÍNH TIỀN LƯƠNG NHÂN VIÊN";
             // 
             // Form_TinhLuong
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 553);
+            Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(cboThang);
             Controls.Add(btnDong);
@@ -174,5 +203,6 @@
         private Button btnDong;
         private ComboBox cboThang;
         private Label label1;
+        private Label label4;
     }
 }

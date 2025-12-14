@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DangNhap));
             lblTitle = new Label();
             txtTenDangNhap = new TextBox();
             txtMatKhau = new TextBox();
@@ -99,6 +98,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.HighlightText;
             label1.Location = new Point(77, 150);
             label1.Name = "label1";
             label1.Size = new Size(124, 23);
@@ -110,6 +110,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.HighlightText;
             label2.Location = new Point(77, 226);
             label2.Name = "label2";
             label2.Size = new Size(84, 23);
@@ -121,7 +122,6 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(412, 483);
             Controls.Add(label2);
             Controls.Add(label1);

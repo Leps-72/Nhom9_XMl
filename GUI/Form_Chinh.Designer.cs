@@ -33,7 +33,6 @@
             quanLyToolStripMenuItem = new ToolStripMenuItem();
             nhanVienToolStripMenuItem = new ToolStripMenuItem();
             banToolStripMenuItem = new ToolStripMenuItem();
-            khuVucToolStripMenuItem = new ToolStripMenuItem();
             danhMụcToolStripMenuItem = new ToolStripMenuItem();
             banHangToolStripMenuItem = new ToolStripMenuItem();
             banHangFormToolStripMenuItem = new ToolStripMenuItem();
@@ -53,9 +52,7 @@
             label1 = new Label();
             statusStrip1 = new StatusStrip();
             panel1 = new Panel();
-            label2 = new Label();
             menuStrip1.SuspendLayout();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -83,7 +80,7 @@
             // 
             // quanLyToolStripMenuItem
             // 
-            quanLyToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nhanVienToolStripMenuItem, banToolStripMenuItem, khuVucToolStripMenuItem, danhMụcToolStripMenuItem });
+            quanLyToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nhanVienToolStripMenuItem, banToolStripMenuItem, danhMụcToolStripMenuItem });
             quanLyToolStripMenuItem.ForeColor = Color.FromArgb(224, 224, 224);
             quanLyToolStripMenuItem.Name = "quanLyToolStripMenuItem";
             quanLyToolStripMenuItem.Size = new Size(85, 27);
@@ -94,7 +91,7 @@
             nhanVienToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             nhanVienToolStripMenuItem.ForeColor = SystemColors.ControlText;
             nhanVienToolStripMenuItem.Name = "nhanVienToolStripMenuItem";
-            nhanVienToolStripMenuItem.Size = new Size(241, 26);
+            nhanVienToolStripMenuItem.Size = new Size(224, 26);
             nhanVienToolStripMenuItem.Text = "Nhân viên";
             nhanVienToolStripMenuItem.Click += nhanVienToolStripMenuItem_Click;
             // 
@@ -103,23 +100,16 @@
             banToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             banToolStripMenuItem.ForeColor = SystemColors.ControlText;
             banToolStripMenuItem.Name = "banToolStripMenuItem";
-            banToolStripMenuItem.Size = new Size(241, 26);
+            banToolStripMenuItem.Size = new Size(224, 26);
             banToolStripMenuItem.Text = "Bàn";
             banToolStripMenuItem.Click += banToolStripMenuItem_Click;
-            // 
-            // khuVucToolStripMenuItem
-            // 
-            khuVucToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            khuVucToolStripMenuItem.Name = "khuVucToolStripMenuItem";
-            khuVucToolStripMenuItem.Size = new Size(241, 26);
-            khuVucToolStripMenuItem.Text = "Khu vực";
             // 
             // danhMụcToolStripMenuItem
             // 
             danhMụcToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
-            danhMụcToolStripMenuItem.Size = new Size(241, 26);
-            danhMụcToolStripMenuItem.Text = "Danh mục+Sản phẩm";
+            danhMụcToolStripMenuItem.Size = new Size(255, 26);
+            danhMụcToolStripMenuItem.Text = "Danh mục và Sản phẩm";
             danhMụcToolStripMenuItem.Click += danhMụcToolStripMenuItem_Click;
             // 
             // banHangToolStripMenuItem
@@ -258,26 +248,12 @@
             // 
             // panel1
             // 
-            panel1.BackgroundImage = Properties.Resources.bautroi;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 27);
             panel1.Name = "panel1";
             panel1.Size = new Size(1182, 526);
             panel1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(315, 36);
-            label2.Name = "label2";
-            label2.Size = new Size(506, 41);
-            label2.TabIndex = 0;
-            label2.Text = "Chào mừng đến với quản lý cà phê";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form_Chinh
             // 
@@ -298,8 +274,6 @@
             Load += Form_Chinh_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -311,7 +285,6 @@
         private ToolStripMenuItem quanLyToolStripMenuItem;
         private ToolStripMenuItem nhanVienToolStripMenuItem;
         private ToolStripMenuItem banToolStripMenuItem;
-        private ToolStripMenuItem khuVucToolStripMenuItem;
         private ToolStripMenuItem danhMụcToolStripMenuItem;
         private ToolStripMenuItem banHangToolStripMenuItem;
         private ToolStripMenuItem thongKeToolStripMenuItem;
@@ -330,7 +303,6 @@
         private StatusStrip statusStrip1;
         private ToolStripMenuItem orderToolStripMenuItem;
         private Panel panel1;
-        private Label label2;
         private ToolStripMenuItem dangXuatToolStripMenuItem;
         private ToolStripMenuItem thoatToolStripMenuItem;
     }

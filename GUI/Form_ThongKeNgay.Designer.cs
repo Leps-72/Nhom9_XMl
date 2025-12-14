@@ -58,7 +58,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.White;
+            label5.ForeColor = Color.Black;
             label5.Location = new Point(248, 140);
             label5.Name = "label5";
             label5.Size = new Size(73, 23);
@@ -70,7 +70,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(529, 140);
             label1.Name = "label1";
             label1.Size = new Size(84, 23);
@@ -109,6 +109,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Snow;
             label2.Location = new Point(826, 463);
             label2.Name = "label2";
             label2.Size = new Size(134, 23);
@@ -120,6 +121,7 @@
             txtTongDoanhThu.AutoSize = true;
             txtTongDoanhThu.BackColor = Color.Transparent;
             txtTongDoanhThu.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtTongDoanhThu.ForeColor = Color.Snow;
             txtTongDoanhThu.Location = new Point(984, 458);
             txtTongDoanhThu.Name = "txtTongDoanhThu";
             txtTongDoanhThu.Size = new Size(23, 28);

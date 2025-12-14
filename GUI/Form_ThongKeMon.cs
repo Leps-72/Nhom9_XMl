@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,13 +21,15 @@ namespace QuanLyQuanCaPhe.GUI
         public Form_ThongKeMon()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
             InitializeForm();
+
             for (int i = 1; i <= 12; i++)
                 cboThang.Items.Add(i);
 
             cboNam.Items.Add(2025);
             this.Load += Form_ThongKeMon_Load;
-            this.BackgroundImage = Properties.Resources.background6;
+            this.BackgroundImage = Properties.Resources.background7;
             this.BackgroundImageLayout = ImageLayout.Stretch;
         }
         private void Form_ThongKeMon_Load(object sender, EventArgs e)
@@ -107,11 +110,8 @@ namespace QuanLyQuanCaPhe.GUI
             dgvThongKeMon.Columns["TongDoanhThu"].HeaderText = "Doanh thu";
             dgvThongKeMon.Columns["TongDoanhThu"].DefaultCellStyle.Format = "N0";
             // ===== HEADER =====
+            dgvThongKeMon.CellPainting += dgv_CellPainting2;
             dgvThongKeMon.EnableHeadersVisualStyles = false;
-            dgvThongKeMon.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;     // nâu cà phê
-            dgvThongKeMon.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgvThongKeMon.ColumnHeadersDefaultCellStyle.Font =
-                new Font("Segoe UI", 8, FontStyle.Bold);
             dgvThongKeMon.ColumnHeadersDefaultCellStyle.Alignment =
                 DataGridViewContentAlignment.MiddleCenter;
 
@@ -183,6 +183,39 @@ namespace QuanLyQuanCaPhe.GUI
             }
 
         }
+        private void dgv_CellPainting2(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // Chỉ vẽ header cột
+            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+            {
+                using (LinearGradientBrush brush = new LinearGradientBrush(
+                    e.CellBounds,
+                    Color.Black,   // màu trên
+                    Color.FromArgb(0, 150, 136),    // màu dưới
+                    LinearGradientMode.Horizontal))
+                {
+                    e.Graphics.FillRectangle(brush, e.CellBounds);
+                }
 
+                // Vẽ viền
+                using (Pen pen = new Pen(Color.White))
+                {
+                    e.Graphics.DrawRectangle(pen, e.CellBounds);
+                }
+
+                // Vẽ chữ
+                TextRenderer.DrawText(
+                    e.Graphics,
+                    e.FormattedValue.ToString(),
+                    new Font("Segoe UI", 8, FontStyle.Bold),
+                    e.CellBounds,
+                    Color.White,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+                );
+
+                e.Handled = true;
+            }
+        }
+        
     }
 }

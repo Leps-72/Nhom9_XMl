@@ -1,13 +1,14 @@
-﻿using System;
+﻿using QuanLyQuanCaPhe.DAL;
+using QuanLyQuanCaPhe.Helper;
+using QuanLyQuanCaPhe.Models;
+using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using System.IO;
-using QuanLyQuanCaPhe.DAL;
-using QuanLyQuanCaPhe.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
-using QuanLyQuanCaPhe.Helper;
 
 namespace QuanLyQuanCaPhe.GUI
 {
@@ -20,6 +21,7 @@ namespace QuanLyQuanCaPhe.GUI
         public Form_NhanVien()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
             LoadNhanVienVaoComboBox();
             LoadLoaiNhanVien();
             LoadChamCong();
@@ -93,11 +95,9 @@ namespace QuanLyQuanCaPhe.GUI
         {
             dgvChamCong.DataSource = null;
             dgvChamCong.DataSource = dsChamCong.OrderByDescending(x => x.NgayLam).ToList();
+            dgvChamCong.CellPainting += dgv_CellPainting;
             dgvChamCong.EnableHeadersVisualStyles = false;
-            dgvChamCong.ColumnHeadersDefaultCellStyle.BackColor =Color.FromArgb(92, 64, 51);     // nâu cà phê
             dgvChamCong.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgvChamCong.ColumnHeadersDefaultCellStyle.Font =
-                new Font("Segoe UI", 7, FontStyle.Bold);
             dgvChamCong.ColumnHeadersDefaultCellStyle.Alignment =
                 DataGridViewContentAlignment.MiddleCenter;
 
@@ -235,7 +235,7 @@ namespace QuanLyQuanCaPhe.GUI
 
         private void Form_NhanVien_Load(object sender, EventArgs e)
         {
-
+            this.DoubleBuffered = true;
         }
 
         private void dgvChamCong_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -246,6 +246,39 @@ namespace QuanLyQuanCaPhe.GUI
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+        private void dgv_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // Chỉ vẽ header cột
+            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+            {
+                using (LinearGradientBrush brush = new LinearGradientBrush(
+                    e.CellBounds,
+                    Color.Black,   // màu trên
+                    Color.FromArgb(92, 64, 51),    // màu dưới
+                    LinearGradientMode.Horizontal))
+                {
+                    e.Graphics.FillRectangle(brush, e.CellBounds);
+                }
+
+                // Vẽ viền
+                using (Pen pen = new Pen(Color.White))
+                {
+                    e.Graphics.DrawRectangle(pen, e.CellBounds);
+                }
+
+                // Vẽ chữ
+                TextRenderer.DrawText(
+                    e.Graphics,
+                    e.FormattedValue.ToString(),
+                    new Font("Segoe UI", 7, FontStyle.Bold),
+                    e.CellBounds,
+                    Color.White,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+                );
+
+                e.Handled = true;
+            }
         }
     }
 }

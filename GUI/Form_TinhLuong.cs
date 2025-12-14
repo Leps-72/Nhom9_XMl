@@ -1,11 +1,12 @@
-﻿using System;
+﻿using QuanLyQuanCaPhe.DAL;
+using QuanLyQuanCaPhe.Models;
+using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using QuanLyQuanCaPhe.DAL;
-using QuanLyQuanCaPhe.Models;
 
 namespace QuanLyQuanCaPhe.GUI
 {
@@ -20,10 +21,13 @@ namespace QuanLyQuanCaPhe.GUI
         public Form_TinhLuong()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
             KhoiTaoComboBoxThang();
             LoadNhanVienVaoComboBox();
             LoadLuongTuXML();
-            HienThiDanhSachLuong(); // Hiển thị TẤT CẢ các tháng
+            HienThiDanhSachLuong();
+            this.BackgroundImage = Properties.Resources.background7;
+            this.BackgroundImageLayout = ImageLayout.Stretch;// Hiển thị TẤT CẢ các tháng
         }
 
         public class LuongThang
@@ -103,6 +107,46 @@ namespace QuanLyQuanCaPhe.GUI
                 dgvLuong.Columns["LuongGio"].DefaultCellStyle.Format = "N0";
                 dgvLuong.Columns["TongLuong"].DefaultCellStyle.Format = "N0";
             }
+            // ===== HEADER =====
+            dgvLuong.CellPainting += dgv_CellPainting;
+            dgvLuong.EnableHeadersVisualStyles = false;
+            dgvLuong.ColumnHeadersDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            dgvLuong.ColumnHeadersHeight = 40;
+            dgvLuong.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvLuong.RowHeadersDefaultCellStyle.BackColor = Color.LightSkyBlue;
+
+            // ===== GIÃN FULL CỘT =====
+            dgvLuong.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+            // ===== BODY =====
+            dgvLuong.BackgroundColor = Color.White;
+            dgvLuong.GridColor = Color.LightGray;
+
+            dgvLuong.DefaultCellStyle.BackColor = Color.White;
+            dgvLuong.DefaultCellStyle.ForeColor = Color.Black;
+            dgvLuong.DefaultCellStyle.SelectionBackColor =
+                Color.SkyBlue;
+            dgvLuong.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            // ===== DÒNG XEN KẼ (đẹp hơn) =====
+            dgvLuong.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.LightBlue;
+
+            // ===== DÒNG (ROW) =====
+            dgvLuong.DefaultCellStyle.Font =
+                new Font("Segoe UI", 8);
+
+            dgvLuong.RowTemplate.Height = 36;
+            dgvLuong.RowsDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            // ===== READ ONLY + ĐẸP =====
+            dgvLuong.ReadOnly = true;
+            dgvLuong.AllowUserToAddRows = false;
+            dgvLuong.AllowUserToResizeRows = false;
         }
 
         // Khi đổi tháng → không cần làm gì (vì không lọc nữa)
@@ -221,6 +265,44 @@ namespace QuanLyQuanCaPhe.GUI
         private void btnDong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtLuongGio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void dgv_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // Chỉ vẽ header cột
+            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+            {
+                using (LinearGradientBrush brush = new LinearGradientBrush(
+                    e.CellBounds,
+                    Color.FromArgb(0, 122, 255),   // màu trên
+                    Color.FromArgb(0, 80, 200),    // màu dưới
+                    LinearGradientMode.Horizontal))
+                {
+                    e.Graphics.FillRectangle(brush, e.CellBounds);
+                }
+
+                // Vẽ viền
+                using (Pen pen = new Pen(Color.White))
+                {
+                    e.Graphics.DrawRectangle(pen, e.CellBounds);
+                }
+
+                // Vẽ chữ
+                TextRenderer.DrawText(
+                    e.Graphics,
+                    e.FormattedValue.ToString(),
+                    new Font("Segoe UI", 8, FontStyle.Bold),
+                    e.CellBounds,
+                    Color.White,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+                );
+
+                e.Handled = true;
+            }
         }
     }
 }

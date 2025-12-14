@@ -52,7 +52,7 @@
             dgvChiTietHD.AllowUserToDeleteRows = false;
             dgvChiTietHD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvChiTietHD.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvChiTietHD.Location = new Point(55, 116);
+            dgvChiTietHD.Location = new Point(58, 153);
             dgvChiTietHD.MultiSelect = false;
             dgvChiTietHD.Name = "dgvChiTietHD";
             dgvChiTietHD.ReadOnly = true;
@@ -65,18 +65,21 @@
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(417, 9);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold);
+            label2.ForeColor = Color.DarkRed;
+            label2.Location = new Point(400, 22);
             label2.Name = "label2";
-            label2.Size = new Size(372, 46);
+            label2.Size = new Size(381, 46);
             label2.TabIndex = 3;
             label2.Text = "THÔNG TIN HÓA ĐƠN";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(41, 71);
+            label3.Location = new Point(44, 108);
             label3.Name = "label3";
             label3.Size = new Size(185, 31);
             label3.TabIndex = 5;
@@ -85,8 +88,9 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(750, 71);
+            label4.Location = new Point(751, 108);
             label4.Name = "label4";
             label4.Size = new Size(162, 31);
             label4.TabIndex = 6;
@@ -95,8 +99,9 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(773, 144);
+            label5.Location = new Point(776, 181);
             label5.Name = "label5";
             label5.Size = new Size(92, 23);
             label5.TabIndex = 7;
@@ -105,8 +110,9 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(773, 194);
+            label6.Location = new Point(776, 231);
             label6.Name = "label6";
             label6.Size = new Size(106, 23);
             label6.TabIndex = 8;
@@ -115,8 +121,9 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(773, 248);
+            label7.Location = new Point(776, 285);
             label7.Name = "label7";
             label7.Size = new Size(101, 23);
             label7.TabIndex = 9;
@@ -125,8 +132,9 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
             label8.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(773, 300);
+            label8.Location = new Point(776, 337);
             label8.Name = "label8";
             label8.Size = new Size(96, 23);
             label8.TabIndex = 10;
@@ -134,7 +142,7 @@
             // 
             // txtTongTien
             // 
-            txtTongTien.Location = new Point(897, 133);
+            txtTongTien.Location = new Point(900, 170);
             txtTongTien.Multiline = true;
             txtTongTien.Name = "txtTongTien";
             txtTongTien.Size = new Size(200, 35);
@@ -142,7 +150,7 @@
             // 
             // txtGiamGia
             // 
-            txtGiamGia.Location = new Point(897, 183);
+            txtGiamGia.Location = new Point(900, 220);
             txtGiamGia.Multiline = true;
             txtGiamGia.Name = "txtGiamGia";
             txtGiamGia.Size = new Size(200, 35);
@@ -150,7 +158,7 @@
             // 
             // txtThanhTien
             // 
-            txtThanhTien.Location = new Point(897, 237);
+            txtThanhTien.Location = new Point(900, 274);
             txtThanhTien.Multiline = true;
             txtThanhTien.Name = "txtThanhTien";
             txtThanhTien.Size = new Size(200, 35);
@@ -159,34 +167,44 @@
             // cboHinhThuc
             // 
             cboHinhThuc.FormattingEnabled = true;
-            cboHinhThuc.Location = new Point(897, 295);
+            cboHinhThuc.Location = new Point(900, 332);
             cboHinhThuc.Name = "cboHinhThuc";
             cboHinhThuc.Size = new Size(200, 28);
             cboHinhThuc.TabIndex = 14;
             // 
             // button2
             // 
-            button2.Location = new Point(908, 381);
+            button2.BackColor = SystemColors.Desktop;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            button2.ForeColor = SystemColors.ControlLightLight;
+            button2.Location = new Point(911, 418);
             button2.Name = "button2";
             button2.Size = new Size(100, 35);
             button2.TabIndex = 16;
             button2.Text = "In hóa đơn";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // btnXacNhan
             // 
-            btnXacNhan.Location = new Point(779, 381);
+            btnXacNhan.BackColor = SystemColors.MenuHighlight;
+            btnXacNhan.FlatStyle = FlatStyle.Popup;
+            btnXacNhan.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnXacNhan.ForeColor = SystemColors.ControlLightLight;
+            btnXacNhan.Location = new Point(782, 418);
             btnXacNhan.Name = "btnXacNhan";
             btnXacNhan.Size = new Size(100, 35);
             btnXacNhan.TabIndex = 17;
             btnXacNhan.Text = "Xác nhận";
-            btnXacNhan.UseVisualStyleBackColor = true;
+            btnXacNhan.UseVisualStyleBackColor = false;
             // 
             // btnDong
             // 
             btnDong.BackColor = SystemColors.ControlLightLight;
+            btnDong.FlatStyle = FlatStyle.Popup;
+            btnDong.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             btnDong.ForeColor = Color.Red;
-            btnDong.Location = new Point(1028, 381);
+            btnDong.Location = new Point(1031, 418);
             btnDong.Name = "btnDong";
             btnDong.Size = new Size(100, 35);
             btnDong.TabIndex = 18;
@@ -197,6 +215,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1182, 553);
             Controls.Add(btnDong);
             Controls.Add(btnXacNhan);

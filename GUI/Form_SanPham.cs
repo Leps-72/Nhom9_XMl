@@ -5,11 +5,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace QuanLyQuanCaPhe
 {
@@ -27,6 +29,14 @@ namespace QuanLyQuanCaPhe
         public Form_QuanLySanPhamDanhMuc()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            EnableDoubleBuffering(tabControl1);
+
+            foreach (TabPage tab in tabControl1.TabPages)
+            {
+                EnableDoubleBuffering(tab);
+            }
+
             Load += Form_Load;
 
             // SP events
@@ -45,6 +55,12 @@ namespace QuanLyQuanCaPhe
             btnSuaDM.Click += (s, e) => BeginEditDM();
             btnXoaDM.Click += (s, e) => DeleteDM();
             btnLuuDM.Click += (s, e) => SaveDM();
+            this.AcceptButton = btnTimSP;
+            tabPage1.BackgroundImage = Properties.Resources.background5;
+            tabPage1.BackgroundImageLayout = ImageLayout.Stretch;
+            tabPage2.BackgroundImage = Properties.Resources.background5;
+            tabPage2.BackgroundImageLayout = ImageLayout.Stretch;
+            this.Paint += Form_Paint;
         }
 
         private void Form_Load(object sender, EventArgs e)
@@ -53,6 +69,7 @@ namespace QuanLyQuanCaPhe
             ReloadAll();
             ResetSPForm();
             ResetDMForm();
+            
         }
 
         private void SetupGrid()
@@ -83,6 +100,50 @@ namespace QuanLyQuanCaPhe
                 FillWeight = 20,
                 DefaultCellStyle = new DataGridViewCellStyle { Format = "N0", Alignment = DataGridViewContentAlignment.MiddleRight }
             });
+            dgvSanPham.CellPainting += dgv_CellPainting;
+
+            // ===== HEADER =====
+            dgvSanPham.EnableHeadersVisualStyles = false;
+            dgvSanPham.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvSanPham.ColumnHeadersDefaultCellStyle.Font =
+                new Font("Segoe UI", 8, FontStyle.Bold);
+            dgvSanPham.ColumnHeadersDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            dgvSanPham.ColumnHeadersHeight = 40;
+            dgvSanPham.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvSanPham.RowHeadersDefaultCellStyle.BackColor = Color.LightSkyBlue;
+
+            // ===== GIÃN FULL CỘT =====
+            dgvSanPham.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+            // ===== BODY =====
+            dgvSanPham.BackgroundColor = Color.White;
+            dgvSanPham.GridColor = Color.LightGray;
+
+            dgvSanPham.DefaultCellStyle.BackColor = Color.White;
+            dgvSanPham.DefaultCellStyle.ForeColor = Color.Black;
+            dgvSanPham.DefaultCellStyle.SelectionBackColor =
+                Color.SkyBlue;
+            dgvSanPham.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            // ===== DÒNG XEN KẼ (đẹp hơn) =====
+            dgvSanPham.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.LightBlue;
+
+            // ===== DÒNG (ROW) =====
+            dgvSanPham.DefaultCellStyle.Font =
+                new Font("Segoe UI", 8);
+
+            dgvSanPham.RowTemplate.Height = 36;
+            dgvSanPham.RowsDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            // ===== READ ONLY + ĐẸP =====
+            dgvSanPham.ReadOnly = true;
+            dgvSanPham.AllowUserToAddRows = false;
+            dgvSanPham.AllowUserToResizeRows = false;
 
             // dgvDanhMuc
             dgvDanhMuc.AutoGenerateColumns = false;
@@ -102,6 +163,47 @@ namespace QuanLyQuanCaPhe
             dgvDanhMuc.Columns.Add(new DataGridViewTextBoxColumn { Name = "MaDM", HeaderText = "Mã DM", DataPropertyName = "MaDM", FillWeight = 20 });
             dgvDanhMuc.Columns.Add(new DataGridViewTextBoxColumn { Name = "TenDM", HeaderText = "Tên danh mục", DataPropertyName = "TenDM", FillWeight = 40 });
             dgvDanhMuc.Columns.Add(new DataGridViewTextBoxColumn { Name = "MoTa", HeaderText = "Mô tả", DataPropertyName = "MoTa", FillWeight = 40 });
+            dgvDanhMuc.CellPainting += dgv_CellPainting;
+
+            // ===== HEADER =====
+            dgvDanhMuc.EnableHeadersVisualStyles = false;
+            dgvDanhMuc.ColumnHeadersDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            dgvDanhMuc.ColumnHeadersHeight = 40;
+            dgvDanhMuc.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvDanhMuc.RowHeadersDefaultCellStyle.BackColor = Color.LightSkyBlue;
+
+            // ===== GIÃN FULL CỘT =====
+            dgvDanhMuc.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+            // ===== BODY =====
+            dgvDanhMuc.BackgroundColor = Color.White;
+            dgvDanhMuc.GridColor = Color.LightGray;
+
+            dgvDanhMuc.DefaultCellStyle.BackColor = Color.White;
+            dgvDanhMuc.DefaultCellStyle.ForeColor = Color.Black;
+            dgvDanhMuc.DefaultCellStyle.SelectionBackColor =
+                Color.SkyBlue;
+            dgvDanhMuc.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            // ===== DÒNG XEN KẼ (đẹp hơn) =====
+            dgvDanhMuc.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.LightBlue;
+
+            // ===== DÒNG (ROW) =====
+            dgvDanhMuc.DefaultCellStyle.Font =
+                new Font("Segoe UI", 8);
+
+            dgvDanhMuc.RowTemplate.Height = 36;
+            dgvDanhMuc.RowsDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            // ===== READ ONLY + ĐẸP =====
+            dgvDanhMuc.ReadOnly = true;
+            dgvDanhMuc.AllowUserToAddRows = false;
+            dgvDanhMuc.AllowUserToResizeRows = false;
         }
 
         private void ReloadAll()
@@ -383,5 +485,65 @@ namespace QuanLyQuanCaPhe
                 }
             }
         }
+        private void Form_Paint(object sender, PaintEventArgs e)
+        {
+            Rectangle rect = this.ClientRectangle;
+
+            using (LinearGradientBrush brush = new LinearGradientBrush(
+                rect,
+                Color.FromArgb(92, 64, 51),      // nâu cà phê đậm
+                Color.FromArgb(245, 240, 230),   // kem sáng
+                LinearGradientMode.Horizontal))    // trên → dưới
+            {
+                e.Graphics.FillRectangle(brush, rect);
+            }
+        }
+        private void dgv_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // Chỉ vẽ header cột
+            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+            {
+                using (LinearGradientBrush brush = new LinearGradientBrush(
+                    e.CellBounds,
+                    Color.FromArgb(0, 122, 255),   // màu trên
+                    Color.FromArgb(0, 80, 200),    // màu dưới
+                    LinearGradientMode.Horizontal))
+                {
+                    e.Graphics.FillRectangle(brush, e.CellBounds);
+                }
+
+                // Vẽ viền
+                using (Pen pen = new Pen(Color.White))
+                {
+                    e.Graphics.DrawRectangle(pen, e.CellBounds);
+                }
+
+                // Vẽ chữ
+                TextRenderer.DrawText(
+                    e.Graphics,
+                    e.FormattedValue.ToString(),
+                    new Font("Segoe UI", 8, FontStyle.Bold),
+                    e.CellBounds,
+                    Color.White,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+                );
+
+                e.Handled = true;
+            }
+        }
+        private void EnableDoubleBuffering(Control control)
+        {
+            typeof(Control).InvokeMember(
+                "DoubleBuffered",
+                System.Reflection.BindingFlags.SetProperty |
+                System.Reflection.BindingFlags.Instance |
+                System.Reflection.BindingFlags.NonPublic,
+                null,
+                control,
+                new object[] { true });
+        }
+
+
     }
+
 }

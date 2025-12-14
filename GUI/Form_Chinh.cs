@@ -29,11 +29,8 @@ namespace QuanLyQuanCaPhe.GUI
         // Constructor nhận đủ thông tin từ Form Đăng nhập
         public Form_Chinh(string tenDangNhap, string hoTenNhanVien, string quyen)
         {
-            this.BackgroundImage = Properties.Resources.bautroi;
-
-            // Dòng này làm ảnh full form, đẹp nhất (thử từng cái nếu cần)
-            this.BackgroundImageLayout = ImageLayout.Stretch;
             InitializeComponent();
+            this.DoubleBuffered = true;
             this.userName = tenDangNhap;
             this.hoTen = hoTenNhanVien;
             this.userRole = quyen;
@@ -184,8 +181,7 @@ namespace QuanLyQuanCaPhe.GUI
 
         private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_QuanLySanPhamDanhMuc f = new Form_QuanLySanPhamDanhMuc();
-            f.Show();
+            MoFormCon(new Form_QuanLySanPhamDanhMuc());
             SetActiveMenu(quanLyToolStripMenuItem);
         }
 

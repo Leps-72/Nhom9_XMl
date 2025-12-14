@@ -62,7 +62,9 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.DarkRed;
             label4.Location = new Point(419, 30);
             label4.Name = "label4";
             label4.Size = new Size(304, 46);
@@ -81,6 +83,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(21, 73);
             label5.Name = "label5";
@@ -91,6 +94,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(21, 134);
             label6.Name = "label6";
@@ -101,6 +105,7 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.Location = new Point(29, 57);
             label7.Name = "label7";
@@ -111,6 +116,7 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
             label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.Location = new Point(17, 50);
             label8.Name = "label8";
@@ -121,6 +127,7 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
             label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.Location = new Point(17, 104);
             label9.Name = "label9";
@@ -131,6 +138,7 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
             label10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.Location = new Point(17, 171);
             label10.Name = "label10";
@@ -141,6 +149,7 @@
             // label11
             // 
             label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
             label11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.Location = new Point(17, 228);
             label11.Name = "label11";
@@ -150,23 +159,29 @@
             // 
             // btnThanhToan
             // 
-            btnThanhToan.Font = new Font("Segoe UI", 12F);
+            btnThanhToan.BackColor = SystemColors.MenuHighlight;
+            btnThanhToan.FlatStyle = FlatStyle.Popup;
+            btnThanhToan.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            btnThanhToan.ForeColor = SystemColors.ControlLightLight;
             btnThanhToan.Location = new Point(17, 284);
             btnThanhToan.Name = "btnThanhToan";
             btnThanhToan.Size = new Size(150, 35);
             btnThanhToan.TabIndex = 14;
             btnThanhToan.Text = "Thanh toán";
-            btnThanhToan.UseVisualStyleBackColor = true;
+            btnThanhToan.UseVisualStyleBackColor = false;
             // 
             // btnHuyOrder
             // 
-            btnHuyOrder.Font = new Font("Segoe UI", 12F);
+            btnHuyOrder.BackColor = Color.Red;
+            btnHuyOrder.FlatStyle = FlatStyle.Popup;
+            btnHuyOrder.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            btnHuyOrder.ForeColor = SystemColors.ControlLightLight;
             btnHuyOrder.Location = new Point(17, 342);
             btnHuyOrder.Name = "btnHuyOrder";
             btnHuyOrder.Size = new Size(150, 35);
             btnHuyOrder.TabIndex = 15;
             btnHuyOrder.Text = "Hủy order";
-            btnHuyOrder.UseVisualStyleBackColor = true;
+            btnHuyOrder.UseVisualStyleBackColor = false;
             // 
             // cboBan
             // 
@@ -206,23 +221,29 @@
             // 
             // btnLamMoi
             // 
-            btnLamMoi.Font = new Font("Segoe UI", 12F);
+            btnLamMoi.BackColor = SystemColors.MenuHighlight;
+            btnLamMoi.FlatStyle = FlatStyle.Popup;
+            btnLamMoi.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            btnLamMoi.ForeColor = SystemColors.ControlLightLight;
             btnLamMoi.Location = new Point(29, 104);
             btnLamMoi.Name = "btnLamMoi";
             btnLamMoi.Size = new Size(138, 35);
             btnLamMoi.TabIndex = 21;
             btnLamMoi.Text = "Làm mới";
-            btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.UseVisualStyleBackColor = false;
             // 
             // btnDong
             // 
-            btnDong.Font = new Font("Segoe UI", 12F);
+            btnDong.BackColor = Color.Brown;
+            btnDong.FlatStyle = FlatStyle.Popup;
+            btnDong.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            btnDong.ForeColor = SystemColors.ControlLightLight;
             btnDong.Location = new Point(192, 284);
             btnDong.Name = "btnDong";
             btnDong.Size = new Size(100, 35);
             btnDong.TabIndex = 22;
             btnDong.Text = "Đóng";
-            btnDong.UseVisualStyleBackColor = true;
+            btnDong.UseVisualStyleBackColor = false;
             // 
             // txtTimMon
             // 
@@ -235,6 +256,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.BackColor = Color.LavenderBlush;
             groupBox2.Controls.Add(dgvMon);
             groupBox2.Controls.Add(cboDanhMuc);
             groupBox2.Controls.Add(txtTimMon);
@@ -270,6 +292,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.PapayaWhip;
             groupBox1.Controls.Add(btnXoaMon);
             groupBox1.Controls.Add(btnLamMoi);
             groupBox1.Controls.Add(label7);
@@ -284,16 +307,20 @@
             // 
             // btnXoaMon
             // 
-            btnXoaMon.Font = new Font("Segoe UI", 12F);
+            btnXoaMon.BackColor = Color.Red;
+            btnXoaMon.FlatStyle = FlatStyle.Popup;
+            btnXoaMon.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            btnXoaMon.ForeColor = SystemColors.ControlLightLight;
             btnXoaMon.Location = new Point(197, 104);
             btnXoaMon.Name = "btnXoaMon";
             btnXoaMon.Size = new Size(138, 35);
             btnXoaMon.TabIndex = 22;
             btnXoaMon.Text = "Xóa món";
-            btnXoaMon.UseVisualStyleBackColor = true;
+            btnXoaMon.UseVisualStyleBackColor = false;
             // 
             // groupBox3
             // 
+            groupBox3.BackColor = Color.LightGray;
             groupBox3.Controls.Add(btnDong);
             groupBox3.Controls.Add(txtTongTien);
             groupBox3.Controls.Add(txtTongSoLuong);
@@ -317,6 +344,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1182, 553);
             Controls.Add(groupBox3);
             Controls.Add(groupBox1);

@@ -180,8 +180,8 @@ namespace QuanLyQuanCaPhe.GUI
             using (LinearGradientBrush brush = new LinearGradientBrush(
                 rect,
                 Color.FromArgb(92, 64, 51),      // nâu cà phê đậm
-                Color.FromArgb(245, 240, 230),   // kem sáng
-                LinearGradientMode.Horizontal))    // trên → dưới
+                Color.BurlyWood,  
+                LinearGradientMode.Horizontal))    
             {
                 e.Graphics.FillRectangle(brush, rect);
             }

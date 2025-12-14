@@ -139,6 +139,15 @@
   <data name="background6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flower-5249940_640.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="background7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sergey-kotenev-TZOT13CZfqY-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wisnu-dwi-wibowo-6yUxikKrDS4-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\elin-melaas-LgBFQtDAbsw-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bautroi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\bautroi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

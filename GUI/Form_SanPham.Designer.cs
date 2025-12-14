@@ -81,6 +81,7 @@
             // 
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage1);
+            tabControl1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             tabControl1.Location = new Point(1, -1);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -104,6 +105,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.DarkRed;
             label5.Location = new Point(407, 24);
             label5.Name = "label5";
             label5.Size = new Size(365, 46);
@@ -133,53 +135,68 @@
             // 
             // btnLuuDM
             // 
+            btnLuuDM.BackColor = Color.OliveDrab;
+            btnLuuDM.FlatStyle = FlatStyle.Popup;
             btnLuuDM.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            btnLuuDM.ForeColor = SystemColors.ControlLightLight;
             btnLuuDM.Location = new Point(276, 304);
             btnLuuDM.Name = "btnLuuDM";
             btnLuuDM.Size = new Size(94, 29);
             btnLuuDM.TabIndex = 10;
             btnLuuDM.Text = "Lưu";
-            btnLuuDM.UseVisualStyleBackColor = true;
+            btnLuuDM.UseVisualStyleBackColor = false;
             // 
             // btnLamMoiDM
             // 
+            btnLamMoiDM.BackColor = SystemColors.MenuHighlight;
+            btnLamMoiDM.FlatStyle = FlatStyle.Popup;
             btnLamMoiDM.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            btnLamMoiDM.ForeColor = SystemColors.ControlLightLight;
             btnLamMoiDM.Location = new Point(154, 304);
             btnLamMoiDM.Name = "btnLamMoiDM";
             btnLamMoiDM.Size = new Size(94, 29);
             btnLamMoiDM.TabIndex = 9;
             btnLamMoiDM.Text = "Làm mới";
-            btnLamMoiDM.UseVisualStyleBackColor = true;
+            btnLamMoiDM.UseVisualStyleBackColor = false;
             // 
             // btnXoaDM
             // 
+            btnXoaDM.BackColor = Color.Brown;
+            btnXoaDM.FlatStyle = FlatStyle.Popup;
             btnXoaDM.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            btnXoaDM.ForeColor = SystemColors.ControlLightLight;
             btnXoaDM.Location = new Point(276, 248);
             btnXoaDM.Name = "btnXoaDM";
             btnXoaDM.Size = new Size(94, 29);
             btnXoaDM.TabIndex = 8;
             btnXoaDM.Text = "Xóa";
-            btnXoaDM.UseVisualStyleBackColor = true;
+            btnXoaDM.UseVisualStyleBackColor = false;
             // 
             // btnSuaDM
             // 
+            btnSuaDM.BackColor = SystemColors.MenuHighlight;
+            btnSuaDM.FlatStyle = FlatStyle.Popup;
             btnSuaDM.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            btnSuaDM.ForeColor = SystemColors.ControlLightLight;
             btnSuaDM.Location = new Point(154, 248);
             btnSuaDM.Name = "btnSuaDM";
             btnSuaDM.Size = new Size(94, 29);
             btnSuaDM.TabIndex = 7;
             btnSuaDM.Text = "Sửa";
-            btnSuaDM.UseVisualStyleBackColor = true;
+            btnSuaDM.UseVisualStyleBackColor = false;
             // 
             // btnThemDM
             // 
+            btnThemDM.BackColor = SystemColors.MenuHighlight;
+            btnThemDM.FlatStyle = FlatStyle.Popup;
             btnThemDM.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            btnThemDM.ForeColor = SystemColors.ControlLightLight;
             btnThemDM.Location = new Point(31, 248);
             btnThemDM.Name = "btnThemDM";
             btnThemDM.Size = new Size(94, 29);
             btnThemDM.TabIndex = 6;
             btnThemDM.Text = "Thêm";
-            btnThemDM.UseVisualStyleBackColor = true;
+            btnThemDM.UseVisualStyleBackColor = false;
             // 
             // txtMoTaDM
             // 
@@ -273,6 +290,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DarkRed;
             label1.Location = new Point(401, 27);
             label1.Name = "label1";
             label1.Size = new Size(359, 46);
@@ -307,18 +325,20 @@
             // 
             // btnTimSP
             // 
+            btnTimSP.BackColor = Color.MistyRose;
+            btnTimSP.FlatStyle = FlatStyle.Popup;
             btnTimSP.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             btnTimSP.Location = new Point(332, 53);
             btnTimSP.Name = "btnTimSP";
             btnTimSP.Size = new Size(72, 29);
             btnTimSP.TabIndex = 15;
             btnTimSP.Text = "Tìm";
-            btnTimSP.UseVisualStyleBackColor = true;
+            btnTimSP.UseVisualStyleBackColor = false;
             // 
             // txtTimSP
             // 
             txtTimSP.Font = new Font("Segoe UI", 12F);
-            txtTimSP.Location = new Point(126, 48);
+            txtTimSP.Location = new Point(126, 51);
             txtTimSP.Name = "txtTimSP";
             txtTimSP.Size = new Size(200, 34);
             txtTimSP.TabIndex = 14;
@@ -354,53 +374,63 @@
             // 
             // btnLuuSP
             // 
+            btnLuuSP.BackColor = Color.OliveDrab;
+            btnLuuSP.FlatStyle = FlatStyle.Popup;
             btnLuuSP.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             btnLuuSP.Location = new Point(283, 369);
             btnLuuSP.Name = "btnLuuSP";
             btnLuuSP.Size = new Size(94, 29);
             btnLuuSP.TabIndex = 10;
             btnLuuSP.Text = "Lưu";
-            btnLuuSP.UseVisualStyleBackColor = true;
+            btnLuuSP.UseVisualStyleBackColor = false;
             // 
             // btnLamMoiSP
             // 
+            btnLamMoiSP.BackColor = SystemColors.MenuHighlight;
+            btnLamMoiSP.FlatStyle = FlatStyle.Popup;
             btnLamMoiSP.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             btnLamMoiSP.Location = new Point(161, 369);
             btnLamMoiSP.Name = "btnLamMoiSP";
             btnLamMoiSP.Size = new Size(94, 29);
             btnLamMoiSP.TabIndex = 9;
             btnLamMoiSP.Text = "Làm mới";
-            btnLamMoiSP.UseVisualStyleBackColor = true;
+            btnLamMoiSP.UseVisualStyleBackColor = false;
             // 
             // btnXoaSP
             // 
+            btnXoaSP.BackColor = Color.Brown;
+            btnXoaSP.FlatStyle = FlatStyle.Popup;
             btnXoaSP.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             btnXoaSP.Location = new Point(283, 313);
             btnXoaSP.Name = "btnXoaSP";
             btnXoaSP.Size = new Size(94, 29);
             btnXoaSP.TabIndex = 8;
             btnXoaSP.Text = "Xóa";
-            btnXoaSP.UseVisualStyleBackColor = true;
+            btnXoaSP.UseVisualStyleBackColor = false;
             // 
             // btnSuaSP
             // 
+            btnSuaSP.BackColor = SystemColors.MenuHighlight;
+            btnSuaSP.FlatStyle = FlatStyle.Popup;
             btnSuaSP.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             btnSuaSP.Location = new Point(161, 313);
             btnSuaSP.Name = "btnSuaSP";
             btnSuaSP.Size = new Size(94, 29);
             btnSuaSP.TabIndex = 7;
             btnSuaSP.Text = "Sửa";
-            btnSuaSP.UseVisualStyleBackColor = true;
+            btnSuaSP.UseVisualStyleBackColor = false;
             // 
             // btnThemSP
             // 
+            btnThemSP.BackColor = SystemColors.MenuHighlight;
+            btnThemSP.FlatStyle = FlatStyle.Popup;
             btnThemSP.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             btnThemSP.Location = new Point(38, 313);
             btnThemSP.Name = "btnThemSP";
             btnThemSP.Size = new Size(94, 29);
             btnThemSP.TabIndex = 6;
             btnThemSP.Text = "Thêm";
-            btnThemSP.UseVisualStyleBackColor = true;
+            btnThemSP.UseVisualStyleBackColor = false;
             // 
             // txtDonGia
             // 
