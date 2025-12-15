@@ -57,4 +57,11 @@
     <ThanhTien>45000</ThanhTien>
     <HinhThucThanhToan>TienMat</HinhThucThanhToan>
   </HoaDon>
+  <HoaDon MaHD="HD006">
+    <NgayLap>2025-12-15T13:29:40</NgayLap>
+    <TongTien>125000</TongTien>
+    <GiamGiaPercent>0</GiamGiaPercent>
+    <ThanhTien>125000</ThanhTien>
+    <HinhThucThanhToan>TienMat</HinhThucThanhToan>
+  </HoaDon>
 </HoaDons>

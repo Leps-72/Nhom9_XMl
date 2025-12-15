@@ -271,7 +271,7 @@ namespace QuanLyQuanCaPhe.GUI
 
             using (LinearGradientBrush brush = new LinearGradientBrush(
                 rect,
-                Color.FromArgb(210, 180, 140),   
+                Color.FromArgb(210, 180, 140),
                 Color.FromArgb(245, 240, 230),   // kem sáng
                 LinearGradientMode.Horizontal))    // trên → dưới
             {

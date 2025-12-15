@@ -56,4 +56,28 @@
     <DonGia>45000</DonGia>
     <ThanhTien>45000</ThanhTien>
   </ChiTiet>
+  <ChiTiet>
+    <MaHD>HD006</MaHD>
+    <MaMon>BANH01</MaMon>
+    <TenMon>Bánh tiramisu</TenMon>
+    <SoLuong>1</SoLuong>
+    <DonGia>45000</DonGia>
+    <ThanhTien>45000</ThanhTien>
+  </ChiTiet>
+  <ChiTiet>
+    <MaHD>HD006</MaHD>
+    <MaMon>BANH02</MaMon>
+    <TenMon>Bánh bông lan trứng muối</TenMon>
+    <SoLuong>1</SoLuong>
+    <DonGia>50000</DonGia>
+    <ThanhTien>50000</ThanhTien>
+  </ChiTiet>
+  <ChiTiet>
+    <MaHD>HD006</MaHD>
+    <MaMon>BACXIU</MaMon>
+    <TenMon>Bạc xỉu</TenMon>
+    <SoLuong>1</SoLuong>
+    <DonGia>30000</DonGia>
+    <ThanhTien>30000</ThanhTien>
+  </ChiTiet>
 </ChiTietHoaDons>

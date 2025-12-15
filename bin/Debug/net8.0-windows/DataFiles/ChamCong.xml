@@ -39,10 +39,19 @@
   <ChamCong>
     <MaNV>NV002</MaNV>
     <HoTen>tu</HoTen>
-    <LoaiNhanVien>Thu Ngân</LoaiNhanVien>
+    <LoaiNhanVien></LoaiNhanVien>
     <NgayLam>2025-11-15</NgayLam>
     <GioVao>13:00</GioVao>
     <GioRa>16:00</GioRa>
     <SoGio>3</SoGio>
+  </ChamCong>
+  <ChamCong>
+    <MaNV>NV003</MaNV>
+    <HoTen>thanhtu</HoTen>
+    <LoaiNhanVien>Phục Vụ</LoaiNhanVien>
+    <NgayLam>2025-12-15</NgayLam>
+    <GioVao>12:00</GioVao>
+    <GioRa>17:00</GioRa>
+    <SoGio>5</SoGio>
   </ChamCong>
 </DanhSachChamCong>

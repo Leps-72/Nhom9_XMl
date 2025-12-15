@@ -40,7 +40,6 @@
             txtGiamGia = new TextBox();
             txtThanhTien = new TextBox();
             cboHinhThuc = new ComboBox();
-            button2 = new Button();
             btnXacNhan = new Button();
             btnDong = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvChiTietHD).BeginInit();
@@ -172,26 +171,13 @@
             cboHinhThuc.Size = new Size(200, 28);
             cboHinhThuc.TabIndex = 14;
             // 
-            // button2
-            // 
-            button2.BackColor = SystemColors.Desktop;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            button2.ForeColor = SystemColors.ControlLightLight;
-            button2.Location = new Point(911, 418);
-            button2.Name = "button2";
-            button2.Size = new Size(100, 35);
-            button2.TabIndex = 16;
-            button2.Text = "In hóa đơn";
-            button2.UseVisualStyleBackColor = false;
-            // 
             // btnXacNhan
             // 
             btnXacNhan.BackColor = SystemColors.MenuHighlight;
             btnXacNhan.FlatStyle = FlatStyle.Popup;
             btnXacNhan.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnXacNhan.ForeColor = SystemColors.ControlLightLight;
-            btnXacNhan.Location = new Point(782, 418);
+            btnXacNhan.Location = new Point(900, 418);
             btnXacNhan.Name = "btnXacNhan";
             btnXacNhan.Size = new Size(100, 35);
             btnXacNhan.TabIndex = 17;
@@ -219,7 +205,6 @@
             ClientSize = new Size(1182, 553);
             Controls.Add(btnDong);
             Controls.Add(btnXacNhan);
-            Controls.Add(button2);
             Controls.Add(cboHinhThuc);
             Controls.Add(txtThanhTien);
             Controls.Add(txtGiamGia);
@@ -253,7 +238,6 @@
         private TextBox txtGiamGia;
         private TextBox txtThanhTien;
         private ComboBox cboHinhThuc;
-        private Button button2;
         private Button btnXacNhan;
         private Button btnDong;
     }

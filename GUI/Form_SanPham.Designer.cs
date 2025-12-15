@@ -321,7 +321,7 @@
             grbThongTinSP.Size = new Size(413, 410);
             grbThongTinSP.TabIndex = 8;
             grbThongTinSP.TabStop = false;
-            grbThongTinSP.Text = "Thông tin danh mục:";
+            grbThongTinSP.Text = "Thông tin sản phẩm:";
             // 
             // btnTimSP
             // 

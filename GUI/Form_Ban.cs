@@ -10,7 +10,7 @@ namespace QuanLyQuanCaPhe.GUI
     public partial class Form_Ban : Form
     {
         // Thay chuỗi kết nối nếu bạn dùng server khác
-        private string connectionString = "Server=CHAODAIKA\\THAITHANHTU2340;Database=QuanLyQuanCaPhe;User Id=sa;Password=12345;TrustServerCertificate=True;";
+        private string connectionString = "Server=LEPS\\NGUYENHUYNH;Database=QuanLyQuanCaPhe;User Id=sa;Password=123;TrustServerCertificate=True;";
 
         public Form_Ban()
         {

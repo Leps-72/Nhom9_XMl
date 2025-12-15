@@ -1784,23 +1784,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hopng\\.nuget\\packages\\": {},
+    "C:\\Users\\huynh\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\XML\\Nhom9_XMl\\QuanLyQuanCaPhe.csproj",
+      "projectUniqueName": "E:\\125\\Nhom9_XMl\\QuanLyQuanCaPhe.csproj",
       "projectName": "QuanLyQuanCaPhe",
-      "projectPath": "D:\\XML\\Nhom9_XMl\\QuanLyQuanCaPhe.csproj",
-      "packagesPath": "C:\\Users\\hopng\\.nuget\\packages\\",
-      "outputPath": "D:\\XML\\Nhom9_XMl\\obj\\",
+      "projectPath": "E:\\125\\Nhom9_XMl\\QuanLyQuanCaPhe.csproj",
+      "packagesPath": "C:\\Users\\huynh\\.nuget\\packages\\",
+      "outputPath": "E:\\125\\Nhom9_XMl\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\hopng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\huynh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1865,7 +1865,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
