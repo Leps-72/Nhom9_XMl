@@ -278,5 +278,10 @@ namespace QuanLyQuanCaPhe.GUI
                 e.Graphics.FillRectangle(brush, rect);
             }
         }
+
+        private void Form_HoaDon_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -108,6 +108,7 @@
             pnlChiTiet.Name = "pnlChiTiet";
             pnlChiTiet.Size = new Size(462, 553);
             pnlChiTiet.TabIndex = 1;
+            pnlChiTiet.Paint += pnlChiTiet_Paint;
             // 
             // flpNut
             // 

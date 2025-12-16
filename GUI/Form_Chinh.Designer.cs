@@ -123,7 +123,7 @@
             // 
             orderToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            orderToolStripMenuItem.Size = new Size(224, 26);
+            orderToolStripMenuItem.Size = new Size(133, 26);
             orderToolStripMenuItem.Text = "Order";
             orderToolStripMenuItem.Click += orderToolStripMenuItem_Click;
             // 
@@ -172,21 +172,21 @@
             // 
             doiMatKhauToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             doiMatKhauToolStripMenuItem.Name = "doiMatKhauToolStripMenuItem";
-            doiMatKhauToolStripMenuItem.Size = new Size(224, 26);
+            doiMatKhauToolStripMenuItem.Size = new Size(204, 26);
             doiMatKhauToolStripMenuItem.Text = "Đổi mật khẩu";
             // 
             // saoLưuPhụcHồiDữLiệuToolStripMenuItem
             // 
             saoLưuPhụcHồiDữLiệuToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             saoLưuPhụcHồiDữLiệuToolStripMenuItem.Name = "saoLưuPhụcHồiDữLiệuToolStripMenuItem";
-            saoLưuPhụcHồiDữLiệuToolStripMenuItem.Size = new Size(224, 26);
+            saoLưuPhụcHồiDữLiệuToolStripMenuItem.Size = new Size(204, 26);
             saoLưuPhụcHồiDữLiệuToolStripMenuItem.Text = "Phục hồi dữ liệu";
             // 
             // dangXuatToolStripMenuItem
             // 
             dangXuatToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             dangXuatToolStripMenuItem.Name = "dangXuatToolStripMenuItem";
-            dangXuatToolStripMenuItem.Size = new Size(224, 26);
+            dangXuatToolStripMenuItem.Size = new Size(204, 26);
             dangXuatToolStripMenuItem.Text = "Đăng xuất";
             dangXuatToolStripMenuItem.Click += dangXuatToolStripMenuItem_Click;
             // 
@@ -194,7 +194,7 @@
             // 
             thoatToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            thoatToolStripMenuItem.Size = new Size(224, 26);
+            thoatToolStripMenuItem.Size = new Size(204, 26);
             thoatToolStripMenuItem.Text = "Thoát";
             thoatToolStripMenuItem.Click += thoatToolStripMenuItem_Click_1;
             // 
@@ -246,6 +246,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1182, 526);
             panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
             // 
             // Form_Chinh
             // 

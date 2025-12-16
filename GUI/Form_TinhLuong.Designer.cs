@@ -185,6 +185,7 @@
             Name = "Form_TinhLuong";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_TinhLuong";
+            Load += Form_TinhLuong_Load;
             ((System.ComponentModel.ISupportInitialize)dgvLuong).EndInit();
             ResumeLayout(false);
             PerformLayout();

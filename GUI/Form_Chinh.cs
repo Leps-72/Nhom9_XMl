@@ -216,7 +216,7 @@ namespace QuanLyQuanCaPhe.GUI
         {
             MoFormCon(new Form_ThongKeNgay());
             SetActiveMenu(thongKeToolStripMenuItem);
-            
+
         }
 
         private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
@@ -253,12 +253,16 @@ namespace QuanLyQuanCaPhe.GUI
             foreach (ToolStripMenuItem item in menuStrip1.Items)
             {
                 item.BackColor = Color.Black;
-                item.ForeColor = Color.FromArgb(224, 224, 224); 
+                item.ForeColor = Color.FromArgb(224, 224, 224);
             }
 
-            activeItem.BackColor = Color.FromArgb(224, 224, 224); 
-            activeItem.ForeColor = Color.Black;     
+            activeItem.BackColor = Color.FromArgb(224, 224, 224);
+            activeItem.ForeColor = Color.Black;
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

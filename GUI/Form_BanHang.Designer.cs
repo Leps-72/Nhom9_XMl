@@ -253,6 +253,7 @@
             txtTimMon.Name = "txtTimMon";
             txtTimMon.Size = new Size(222, 34);
             txtTimMon.TabIndex = 23;
+            txtTimMon.TextChanged += txtTimMon_TextChanged;
             // 
             // groupBox2
             // 
@@ -353,6 +354,7 @@
             Name = "Form_BanHang";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_BanHang";
+            Load += Form_BanHang_Load_1;
             ((System.ComponentModel.ISupportInitialize)dgvOrder).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();

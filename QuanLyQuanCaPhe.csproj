@@ -52,4 +52,9 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="bin\Debug\net8.0-windows\DataFiles\QuanLyQuanCaPhe.xslt" />
+    <None Include="bin\Debug\net8.0-windows\templates\QuanLyQuanCaPhe.xslt" />
+  </ItemGroup>
+
 </Project>

@@ -48,10 +48,19 @@
   <ChamCong>
     <MaNV>NV003</MaNV>
     <HoTen>thanhtu</HoTen>
-    <LoaiNhanVien>Phục Vụ</LoaiNhanVien>
+    <LoaiNhanVien></LoaiNhanVien>
     <NgayLam>2025-12-15</NgayLam>
     <GioVao>12:00</GioVao>
     <GioRa>17:00</GioRa>
     <SoGio>5</SoGio>
+  </ChamCong>
+  <ChamCong>
+    <MaNV>NV004</MaNV>
+    <HoTen>Nguyễn Văn Tùng</HoTen>
+    <LoaiNhanVien>Quản Lý</LoaiNhanVien>
+    <NgayLam>2025-12-16</NgayLam>
+    <GioVao>07:00</GioVao>
+    <GioRa>19:00</GioRa>
+    <SoGio>12</SoGio>
   </ChamCong>
 </DanhSachChamCong>

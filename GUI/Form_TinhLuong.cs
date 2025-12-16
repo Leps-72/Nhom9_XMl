@@ -304,5 +304,10 @@ namespace QuanLyQuanCaPhe.GUI
                 e.Handled = true;
             }
         }
+
+        private void Form_TinhLuong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,17 +1,1 @@
-{
-  "ShowEmptyProjects": false,
-  "SelectedGroups": [],
-  "ExpandedProjects": [],
-  "EnableSpellChecker": true,
-  "ColumnOrder": [
-    "name",
-    "type",
-    "neutral-value",
-    "neutral-comment"
-  ],
-  "VisibleColumnKeys": [
-    "name",
-    "neutral-comment",
-    "neutral-value"
-  ]
-}
+{"ShowEmptyProjects":false,"CustomColumnOrderings":{},"ShowValidationErrors":true,"SelectedResourceGroupsByProjectFilePath":{"C:\\Users\\thanh\\source\\repos\\QuanLyQuanCaPhe\\Nhom9_XMl\\QuanLyQuanCaPhe.csproj":["C:\\Users\\thanh\\source\\repos\\QuanLyQuanCaPhe\\Nhom9_XMl\\GUI\\Form_Ban.resx"]},"VisibleColumnKeys":["name","neutral-comment","neutral-value"]}

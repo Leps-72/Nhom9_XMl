@@ -571,5 +571,15 @@ namespace QuanLyQuanCaPhe.GUI
                 e.Graphics.FillRectangle(brush, rect);
             }
         }
+
+        private void Form_BanHang_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTimMon_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

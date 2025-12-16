@@ -160,6 +160,7 @@
             Name = "Form_ThongKeNgay";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_ThongKeNgay";
+            Load += Form_ThongKeNgay_Load_1;
             ((System.ComponentModel.ISupportInitialize)dgvDoanhThu).EndInit();
             ResumeLayout(false);
             PerformLayout();

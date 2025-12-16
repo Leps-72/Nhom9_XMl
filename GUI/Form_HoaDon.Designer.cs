@@ -220,6 +220,7 @@
             Name = "Form_HoaDon";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form_HoaDon";
+            Load += Form_HoaDon_Load_1;
             ((System.ComponentModel.ISupportInitialize)dgvChiTietHD).EndInit();
             ResumeLayout(false);
             PerformLayout();

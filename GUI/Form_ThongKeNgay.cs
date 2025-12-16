@@ -150,5 +150,10 @@ namespace QuanLyQuanCaPhe
                 e.Handled = true;
             }
         }
+
+        private void Form_ThongKeNgay_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
